@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+html { 
+    background-image: linear-gradient(90deg, rgb(156, 135, 116), rgb(180, 180, 180));
+}
+
+h1 {
+    position:relative;
+    right:20px;
+    color: #ffd7c5;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: right;
+}
+
+#top {
+    background-color: rgb(34, 34, 34);
+    border: 1px solid;
+    border-bottom: 5px solid rgba(180, 124, 19, 0.89);
+}
+
+img.resize {
+    max-width:70%;
+    max-height:70%;
+  }
