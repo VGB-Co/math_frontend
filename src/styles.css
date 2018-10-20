@@ -6,9 +6,9 @@ html {
 }
 
 h1 {
-    color: #ffd7c5;
+    color: #ffeecd;
     font-size: 30px;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #222222;
 }
 
 .container {
@@ -17,40 +17,76 @@ h1 {
     display: inline-block;
     background-color: rgb(34, 34, 34);
     height:90px;
-  }
-  
-  .left-half {
-    left:20px;
-    text-align: left;
-    position: absolute;
-    width: 50%;
-    height: 85px;
-    border-bottom: 5px solid rgba(180, 124, 19, 0.89);
-  }
-  
-  .right-half {
-    text-align: right;
-    position: absolute;
-    right: 20px;
-    width: 50%;
-    height: 85px;
-    border-bottom: 5px solid rgba(180, 124, 19, 0.89);
-  }
+}
 
-  #davelopers_title{
-    font-size: 20px;
-    font-weight: bold;
-  }
+.left-half {
+  left:20px;
+  text-align: left;
+  position: absolute;
+  width: 50%;
+  height: 85px;
+  border-bottom: 5px solid rgba(180, 124, 19, 0.89);
+}
 
-  .developers{
-    font-size: 16px;
-    font-style: italic;
-    position: relative;
-    left: 20px;
-  }
+.right-half {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  width: 50%;
+  height: 85px;
+  border-bottom: 5px solid rgba(180, 124, 19, 0.89);
+}
+
+#davelopers_title{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.developers{
+  font-size: 16px;
+  font-style: italic;
+  position: relative;
+  left: 20px;
+}
 
 #team{
+  left:0px;
+}
+
+.container2 {
+  display: table;
+  width: 100%;
+}
+
+.left {
+  left: 0px;
+  left:10px;
+  text-align: left;
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  width: 12%;
+  height: 100%;
+  background: #222222;
+}
+
+.middle {
+  right: 0px;
+  text-align: left;
+  position: absolute;
+  width: 85%;
+  height: auto;
+}
+
+.left button{
+  left: 0px;
+  color: white;
+  background-color: #222222;
+  height: 100px;
+  width: 100%;
+  border: none; 
+}
+
+.left button:hover{
+  size: 130%;
+  filter: brightness(150%);
+  background-color:rgba(0,0,0,1);
 }

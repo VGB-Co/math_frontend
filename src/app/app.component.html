@@ -1,18 +1,30 @@
-<h1 class="container">
-    <div class="left-half">
-        <h1>Welcome to {{ title }}</h1>
-    </div>
-    <div class="right-half">
-        <img src="https://i.imgur.com/g9JdFG2.jpg" width="80" height="80" alt="logo">
-    </div>
+  <h1 class="container">
+      <div class="left-half">
+          <h1>Welcome to {{ title }}</h1>
+      </div>
+      <div class="right-half">
+          <img src="https://i.imgur.com/g9JdFG2.jpg" width="80" height="80" alt="logo">
+      </div>
   </h1>
 
-  <app-test></app-test>
-  <h2>Solve mathematical tests and improve your math skills easily with us!</h2>
-  <div id="team">
-    <li id="davelopers_title">The developers:</li>
-    <li class="developers"> Víg Levente István as IOS Developer</li>
-    <li class="developers"> Gurmai István as the Backend Developer</li>
-    <li class="developers"> Berki Ádám as the Frontend Developer</li>
-  </div>
+  <div class="container2">
 
+    <div class="left">
+      <button title="Let's play!" id="play-btn">Let' play!</button>
+      <button title="See ladeboards!" id="ladeboards-btn">Ladeboard</button>
+      <button title="See some math!" id="learn-btn">Lets' math!</button>
+    </div>
+
+    <div class="middle">
+      <app-test></app-test>
+
+      <h3>Solve mathematical tests and improve your math skills easily with us!</h3>
+      <ul id="team">
+        <li id="davelopers_title">The developers:</li>
+        <li class="developers"> Víg Levente István as IOS Developer</li>
+        <li class="developers"> Gurmai István as the Backend Developer</li>
+        <li class="developers"> Berki Ádám as the Frontend Developer</li>
+      </ul>
+    </div>
+
+  </div>

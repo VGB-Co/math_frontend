@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
 selector: 'app-test',
-template:`<h2> Welcome {{siteUrl.toUpperCase()}} ! </h2>
-  <h2 [style.color]="hasError ? 'green' : 'orange'">Name: {{titleInput.value}}</h2>
+template:`<i> Welcome {{siteUrl.toUpperCase()}} ! </i>
+  <h3><span [style.color]="hasError ? 'green' : 'red'">Name: </span> <i> {{titleInput.value}}</i></h3>
   <input type="text"  #titleInput>
   <button type="submit" (click)="addTodo(titleInput.value)">Add</button>
   
