@@ -6,7 +6,7 @@ html {
 }
 
 h1 {
-    color: #ffeecd;
+    color: #fffbf2;
     font-size: 30px;
     text-shadow: 2px 2px 4px #222222;
 }
@@ -38,24 +38,23 @@ h1 {
 }
 
 #davelopers_title{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .developers{
   font-size: 16px;
   font-style: italic;
-  position: relative;
-  left: 20px;
 }
 
-#team{
-  left:0px;
+.developers:hover{
+  font-weight: bold;
 }
 
 .container2 {
   display: table;
   width: 100%;
+  height: 800px;
 }
 
 .left {
@@ -64,7 +63,7 @@ h1 {
   text-align: left;
   position: absolute;
   width: 12%;
-  height: 100%;
+  height: 800px;
   background: #222222;
 }
 
@@ -73,20 +72,33 @@ h1 {
   text-align: left;
   position: absolute;
   width: 85%;
-  height: auto;
+  height: 800px;
 }
 
 .left button{
+  font-size:15px;
   left: 0px;
   color: white;
   background-color: #222222;
   height: 100px;
   width: 100%;
   border: none; 
+  font-style: italic;
 }
 
 .left button:hover{
-  size: 130%;
+  font-size: 18px;
   filter: brightness(150%);
   background-color:rgba(0,0,0,1);
+}
+
+#logo_bottom{
+  width: 12%;
+  height: 12%;
+  padding-bottom: 20px;
+}
+
+#logo_bottom:hover{
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 }
