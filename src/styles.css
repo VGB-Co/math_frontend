@@ -102,3 +102,56 @@ img:hover{
 	-webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+.login-box{
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-box h1{
+  font-size: 30px;
+  color: #ad8956;
+  border-bottom: 5px solid #ad8956;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.textbox{
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #ad8956;
+}
+
+.textbox input{
+  border: none;
+  outline: none;
+  background: none;
+  width: 150px;
+  font-size: 18px;
+  float: left;
+  margin: 10px;
+  color: #424140;
+}
+
+.btn{
+  width: 100%;
+  background: rgb(238, 204, 159);
+  color: white;
+  border: 2px solid #ad8956;
+  height: 30px;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: rgb(189, 164, 131);
+  font-size: 16px;
+}
