@@ -16,16 +16,16 @@ export class AppComponent {
   constructor(private _restClient: RestClient) { }
 
   ngOnInit() {
-    this.getFoods();
+    this.getTopListFor(0);
   }
 
-    getFoods() {
-        this._restClient.getTopListFor(0).subscribe(
-        data => { this.topListUsers = data},
-        err => console.error(err),
-        () => console.log(this.topListUsers)
-      );
-    }
+  getTopListFor(level) {
+      this._restClient.getTopListFor(level).subscribe(
+      data => { this.topListUsers = data},
+      err => console.error(err),
+      () => console.log(this.topListUsers)
+    );
+  }
 
   visible_mainScreen=true;
   visible_LoginBox=false;
