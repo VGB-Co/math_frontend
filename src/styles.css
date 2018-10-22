@@ -40,6 +40,7 @@ h1 {
 #davelopers_title{
   font-size: 18px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .developers{
@@ -106,7 +107,7 @@ img:hover{
 .login-box{
   width: 300px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -154,4 +155,9 @@ img:hover{
 .btn:hover{
   background: rgb(189, 164, 131);
   font-size: 16px;
+}
+
+.ladeboard h1, .about h1{
+  font-size: 40px;
+  color: #ad8956;
 }
