@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {RestClient} from './Utilities/rest.client';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,22 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'VGB Co.';
+
+  public topListUsers;
+ 
+  constructor(private _restClient: RestClient) { }
+
+  ngOnInit() {
+    this.getFoods();
+  }
+
+    getFoods() {
+        this._restClient.getTopListFor(0).subscribe(
+        data => { this.topListUsers = data},
+        err => console.error(err),
+        () => console.log(this.topListUsers)
+      );
+    }
 
   visible_mainScreen=true;
   visible_LoginBox=false;
