@@ -10,10 +10,10 @@
 <div class="container2">
 
   <div class="left">
+    <button title="Back to the mainscreen!" id="mainscreen-btn" (click)="clickOnMainScreen()">Home</button>
     <button title="Let's play!" id="play-btn" (click)="clickOnPlay()">Let' play!</button>
     <button title="See ladeboards!" id="ladeboards-btn" (click)="clickOnLadeboard()">Ladeboard</button>
     <button title="Who we are?" id="about-btn" (click)="clickOnAbout()">About</button>
-    <button title="Back to the mainscreen!" id="mainscreen-btn" (click)="clickOnMainScreen()">Back</button>
   </div>
 
   <div class="middle">
@@ -31,7 +31,13 @@
       <div class="textbox">
         <input type="password" placeholder="Password " name="" value="">
       </div>
-      <input class="btn" type="button" name="" value="SIGN IN">
+        <button title="Let's play!" id="play-btn" (click)="clickOnSignIn()">Sign In</button>
+    </div>
+
+    <div class="questions" *ngIf="visible_Questions">
+      <h2>Your actual task is: </h2>
+      <a> 4 + 5 = </a><input type="text" placeholder="Answer here" name="" value="">
+      <button title="Submit my answer" id="answer-btn" (click)="clickOnSubmitAnswer()">Sign In</button>
     </div>
 
     <div class="ladeboard" *ngIf="visible_Ladeboard">
