@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 //ng generate module [name] -> create modules
+//sok ilyet
 
 @Component({
 selector: 'app-test',
