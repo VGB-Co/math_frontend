@@ -15,7 +15,6 @@ h1 {
     display: table;
     width: 100%;
     display: inline-block;
-    background-color: rgb(34, 34, 34);
     height:90px;
 }
 
@@ -59,8 +58,8 @@ h1 {
 }
 
 .left {
+  padding-top: 8rem;
   left: 0px;
-  left:10px;
   text-align: left;
   position: absolute;
   width: 12%;
@@ -69,6 +68,7 @@ h1 {
 }
 
 .middle {
+  padding-top: 8rem;
   right: 0px;
   text-align: left;
   position: absolute;

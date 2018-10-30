@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+
+//ng generate module [name] -> create modules
+
 @Component({
 selector: 'app-test',
 template:`<i> Welcome {{siteUrl.toUpperCase()}} ! </i>
