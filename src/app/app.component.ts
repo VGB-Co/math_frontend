@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RestClient} from './Utilities/rest.client';
+import {RestClient} from './Mocky/rest.client';
 import {Observable} from 'rxjs';
 
 @Component({

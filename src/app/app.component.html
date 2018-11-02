@@ -46,6 +46,36 @@
 
     <div class="ladeboard" *ngIf="visible_Ladeboard">
       <h1>Ladeboard</h1>
+      <div class="container">
+          <h2 style="padding-top: 50px">Level: --choosebox--</h2>
+          <p style="padding-top: 20px">The following players were the quickest in the choosen difficulity level:</p>            
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Place</th>
+                <th>Player</th>
+                <th>Time (sec)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Levi</td>
+                <td>50.2</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Pista</td>
+                <td>51.4</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Berki</td>
+                <td>56.5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
 
     <div class="about" *ngIf="visible_About">

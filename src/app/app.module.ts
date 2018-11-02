@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
-import { RestClient } from './Utilities/rest.client';
+import { RestClient } from './Mocky/rest.client';
 
 @NgModule({
   declarations: [

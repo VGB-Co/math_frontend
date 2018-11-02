@@ -58,7 +58,7 @@ h1 {
 }
 
 .left {
-  padding-top: 8rem;
+  padding-top: 15rem;
   left: 0px;
   text-align: left;
   position: absolute;
@@ -68,7 +68,7 @@ h1 {
 }
 
 .middle {
-  padding-top: 8rem;
+  padding-top: 15rem;
   right: 0px;
   text-align: left;
   position: absolute;
