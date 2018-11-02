@@ -5,26 +5,22 @@ html {
     background-image: url("./pictures/bckground.png");
 }
 
-h1 {
-    color: #fffbf2;
-    font-size: 30px;
-    text-shadow: 2px 2px 4px #222222;
-}
-
-.container {
+.container1 {
     display: table;
     width: 100%;
     display: inline-block;
-    height:90px;
+    height: 9rem;
+    border-bottom: 5px solid rgba(180, 124, 19, 0.89);
 }
 
 .left-half {
-  left:20px;
+  top:20px;
+  left:40px;
   text-align: left;
   position: absolute;
+  color: whitesmoke;
   width: 50%;
   height: 85px;
-  border-bottom: 5px solid rgba(180, 124, 19, 0.89);
 }
 
 .right-half {
@@ -33,7 +29,6 @@ h1 {
   right: 20px;
   width: 50%;
   height: 85px;
-  border-bottom: 5px solid rgba(180, 124, 19, 0.89);
 }
 
 #davelopers_title{
@@ -58,7 +53,7 @@ h1 {
 }
 
 .left {
-  padding-top: 15rem;
+  padding-top: 10rem;
   left: 0px;
   text-align: left;
   position: absolute;
@@ -68,7 +63,8 @@ h1 {
 }
 
 .middle {
-  padding-top: 15rem;
+  padding-top: 13rem;
+  line-height: 2;
   right: 0px;
   text-align: left;
   position: absolute;
@@ -107,7 +103,7 @@ img:hover{
 .login-box{
   width: 300px;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -140,24 +136,18 @@ img:hover{
   color: #424140;
 }
 
-.btn{
-  width: 100%;
-  background: rgb(238, 204, 159);
-  color: white;
-  border: 2px solid #ad8956;
-  height: 30px;
-  padding: 5px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn:hover{
-  background: rgb(189, 164, 131);
-  font-size: 16px;
-}
-
 .ladeboard h1, .about h1{
+  padding-bottom: 50px;
   font-size: 40px;
   color: #ad8956;
+}
+
+#signIn-btn{
+  width: 300px;
+  text-align: center;
+}
+
+#signIn-btn:hover{
+  font-size: 130%;
+  font-weight: bold;
 }
