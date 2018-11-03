@@ -34,6 +34,8 @@ export class AppComponent {
   visible_Questions=false;
   value_userInput="";
   value_passwordInput="";
+  value_taskprogressbar=0;
+  made_tasks=0;
 
   clickOnPlay(){
     this.visible_LoginBox = true;
@@ -78,7 +80,13 @@ export class AppComponent {
   }
 
   clickOnSubmitAnswer(){
-    console.log("Works SA!")
+    var widthString = "";
+    this.made_tasks += 1;
+    this.value_taskprogressbar = 10 * this.made_tasks;
+    var pbValueString: string = String(this.value_taskprogressbar);
+    widthString="--pb-width: " + pbValueString + "%";
+    //console.log(widthString);
+    document.querySelector("body").style.cssText = widthString;
   }
 
 }
