@@ -36,6 +36,8 @@ export class AppComponent {
   value_passwordInput="";
   value_taskprogressbar=0;
   made_tasks=0;
+  answer_string="";
+  correct_answer=9;
 
   clickOnPlay(){
     this.visible_LoginBox = true;
@@ -87,6 +89,15 @@ export class AppComponent {
     widthString="--pb-width: " + pbValueString + "%";
     //console.log(widthString);
     document.querySelector("body").style.cssText = widthString;
+    if(this.correct_answer == 9) //todo addtyped value
+    {
+      this.answer_string=" was correct! ";
+    }
+    else{
+      this.answer_string=" was incorrect! ";
+    }
+
+    console.log(this.answer_string);
   }
 
 }
