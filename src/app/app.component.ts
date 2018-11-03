@@ -38,6 +38,7 @@ export class AppComponent {
   made_tasks=0;
   answer_string="";
   correct_answer=9;
+  listedLadeboard="";
 
   clickOnPlay(){
     this.visible_LoginBox = true;
@@ -87,17 +88,31 @@ export class AppComponent {
     this.value_taskprogressbar = 10 * this.made_tasks;
     var pbValueString: string = String(this.value_taskprogressbar);
     widthString="--pb-width: " + pbValueString + "%";
-    //console.log(widthString);
     document.querySelector("body").style.cssText = widthString;
-    if(this.correct_answer == 9) //todo addtyped value
+
+    //todo - add typed value to ts for check
+    if(this.correct_answer == 9) 
     {
-      this.answer_string=" was correct! ";
-    }
+      this.answer_string=" was correct! ";}
     else{
-      this.answer_string=" was incorrect! ";
-    }
+      this.answer_string=" was incorrect! ";}
 
     console.log(this.answer_string);
+  }
+
+  showEasyLadeboard(){
+    this.listedLadeboard="easy";
+    console.log(this.listedLadeboard + " ladeboard chosen");
+  }
+
+  showMediumLadeboard(){
+    this.listedLadeboard="medium";
+    console.log(this.listedLadeboard + " ladeboard chosen");
+  }
+
+  showHardLadeboard(){
+    this.listedLadeboard="hard";
+    console.log(this.listedLadeboard + " ladeboard chosen");
   }
 
 }

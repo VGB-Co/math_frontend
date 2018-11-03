@@ -76,6 +76,16 @@ body{
   height: 800px;
 }
 
+.diffchoser{
+  width: 100px;
+}
+
+.diffchoser:hover{
+  font-size: 110%;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
 .left button{
   font-size:15px;
   left: 0px;
@@ -154,6 +164,7 @@ img:hover{
 #signIn-btn:hover{
   font-size: 130%;
   font-weight: bold;
+  transition: 0.5s;
 }
 
 #taskprogressbar{

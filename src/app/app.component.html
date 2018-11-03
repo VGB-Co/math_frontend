@@ -59,7 +59,14 @@
     <div class="ladeboard" *ngIf="visible_Ladeboard">
       <h1>Ladeboard</h1>
       <div class="container">
-          <h2>Level: --choosebox--</h2>
+          <p>
+            <span style="font-size: 20px; font-weight: bold;">Level: </span>
+            <button class="diffchoser" (click)="showEasyLadeboard()">Easy</button>
+            or
+            <button class="diffchoser" (click)="showMediumLadeboard()">Medium</button>
+            or
+            <button class="diffchoser" (click)="showHardLadeboard()">Hard</button>
+          </p>
           <p style="padding-top: 20px">The following players were the quickest in the choosen difficulity level:</p>            
           <table class="table">
             <thead>
