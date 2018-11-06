@@ -58,15 +58,27 @@
 
     <div class="ladeboard" *ngIf="visible_Ladeboard">
       <h1>Ladeboard</h1>
+
       <div class="container">
           <p>
-            <span style="font-size: 20px; font-weight: bold;">Level: </span>
+            <span style="font-size: 20px; font-weight: bold;">Choose diff. level: </span>
             <button class="diffchoser" (click)="showEasyLadeboard()">Easy</button>
             or
             <button class="diffchoser" (click)="showMediumLadeboard()">Medium</button>
             or
             <button class="diffchoser" (click)="showHardLadeboard()">Hard</button>
           </p>
+          <form>
+            <label class="radio-inline">
+              <input type="radio" name="optradio" id="easy_radio" checked>Easy
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio" id="medium_radio">Medium
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio" id="hard_radio">Hard
+            </label>
+          </form>
           <p style="padding-top: 20px">The following players were the quickest in the choosen difficulity level:</p>            
           <table class="table">
             <thead>
