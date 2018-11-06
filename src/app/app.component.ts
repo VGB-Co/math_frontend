@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {RestClient} from './Mocky/rest.client';
 import {Observable} from 'rxjs';
 import {User} from './user';
-import { userInfo } from 'os';
 
 @Component({
   selector: 'app-root',
