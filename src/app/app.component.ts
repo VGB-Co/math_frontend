@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {RestClient} from './Mocky/rest.client';
 import {Observable} from 'rxjs';
+import {User} from './user';
+import { userInfo } from 'os';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +23,14 @@ export class AppComponent {
 
   getTopListFor(level) {
       this._restClient.getTopListFor(level).subscribe(
-      data => { this.topListUsers = data},
+      data => {
+                var users = new Array<User>();
+                data["users"].forEach(user => {
+                  let curr_user = new User(user);
+                  users.push(curr_user);
+                });
+                this.topListUsers=users;
+              },
       err => console.error(err),
       () => console.log(this.topListUsers)
     );
@@ -103,6 +112,7 @@ export class AppComponent {
   showEasyLadeboard(){
     this.listedLadeboard="easy";
     console.log(this.listedLadeboard + " ladeboard chosen");
+    console.log(this.topListUsers[0].position + " : " + this.topListUsers[0].name + " - " + this.topListUsers[0].topScore);
   }
 
   showMediumLadeboard(){
