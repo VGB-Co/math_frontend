@@ -25,18 +25,11 @@
     <div *ngIf="visible_mainScreen">
       <h3>Solve mathematical tests and improve your math skills easily with us!</h3>
       <app-test></app-test>
-      <app-sign-in-register></app-sign-in-register>
     </div>
 
     <div class="login-box" *ngIf="visible_LoginBox">
-      <h1><i class="fa fa-sign-in" aria-hidden="true"></i>   Login</h1>
-      <div class="textbox">
-        <input type="text" placeholder="Username " name="" value="">
-      </div>
-      <div class="textbox">
-        <input type="password" placeholder="Password " name="" value="">
-      </div>
-        <button title="Let's play!" id="signIn-btn" (click)="clickOnSignIn()">Sign In</button>
+      <app-sign-in-register></app-sign-in-register>
+      <button title="Valt_jatekra" id="signIn-btn" (click)="clickOnSignIn()">Probavaltas Jatekra</button>
     </div>
 
     <div class="questions" *ngIf="visible_Questions">
