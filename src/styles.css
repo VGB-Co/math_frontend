@@ -5,8 +5,8 @@ html {
 }
 
 body{
-  background-image: url("./pictures/bckground.png");
-  --pb-width: 0%;
+    background-image: url("./pictures/bckground.png");
+    --pb-width: 0%;
 }
 
 .container1 {

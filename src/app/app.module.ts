@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { RestClient } from './Mocky/rest.client';
+import { SignInRegisterComponent } from './sign-in-register/sign-in-register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    SignInRegisterComponent
   ],
   imports: [
     BrowserModule,
