@@ -29,6 +29,33 @@ body{
   font-family: "Pacifico", cursive;
 }
 
+.left {
+  padding-top: 12rem;
+  left: 0px;
+  text-align: left;
+  width: 12%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.left a {
+  padding: 20px 8px 6px 16px;
+  font-size: 20px;
+  color: #a8a8a8;
+  display: block;
+  text-decoration: none;
+}
+
+.left a:hover {
+  text-decoration: none;
+  font-size: 21px;
+  color: #f1f1f1;
+  transform: 0.5s;
+}
+
 .right-half {
   text-align: right;
   position: absolute;
@@ -58,16 +85,6 @@ body{
   height: 800px;
 }
 
-.left {
-  padding-top: 10rem;
-  left: 0px;
-  text-align: left;
-  position: absolute;
-  width: 12%;
-  height: 800px;
-  background: #222222;
-}
-
 .middle {
   padding-top: 13rem;
   line-height: 2;
@@ -86,23 +103,6 @@ body{
   font-size: 110%;
   font-weight: bold;
   transition: 0.5s;
-}
-
-.left button{
-  font-size:15px;
-  left: 0px;
-  color: white;
-  background-color: #222222;
-  height: 100px;
-  width: 100%;
-  border: none; 
-  font-style: italic;
-}
-
-.left button:hover{
-  font-size: 18px;
-  filter: brightness(150%);
-  background-color:rgba(0,0,0,1);
 }
 
 #logo_bottom{
