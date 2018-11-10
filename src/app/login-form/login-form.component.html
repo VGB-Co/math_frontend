@@ -1,3 +1,8 @@
+<div id="logged_in" *ngIf="visible_who_is_loggedIn">
+    <a id="logged_in_left" >You are logged in as: <span style="color:green; font-weight: bold;">{{ user }}</span></a>
+    <button id="logged_in_right" title="Sign out" (click)="clickOnSignOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</button>
+  </div>
+
 <form (submit)="loginUser($event)" *ngIf="visible_loginUser">
   <h1><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</h1>
   <div class="input">

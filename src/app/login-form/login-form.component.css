@@ -41,3 +41,35 @@ div.input #login_btn:hover{
 	transition: 0.5s;
 	border: 2px solid rgba(180, 124, 19, 0.26);
 }
+
+#logged_in{
+	margin-bottom: 30px;
+	height: 20px;
+}
+
+#logged_in_left {
+	text-align: left;
+	position: absolute;
+	left: 10px;
+	font-size: 15px;
+  }
+
+#logged_in_right {
+	font-size: 10px;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	text-decoration: none;
+}
+
+.button{
+	text-align:center;
+	height: 15px;
+	width: 100px;
+}
+
+button:hover{
+	font-size: 110%;
+	font-weight: bold;
+	transition: 0.5s;
+}
