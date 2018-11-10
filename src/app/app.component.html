@@ -9,11 +9,12 @@
 
   <div class="middle">
 
+    <div>
+        <app-header></app-header>
+        <app-login-form></app-login-form>
+    </div>
+
     <div *ngIf="visible_mainScreen">
-      <div id="fullPage">
-          <app-header></app-header>
-          <app-login-form></app-login-form>
-      </div>
       <h3>Solve mathematical tests and improve your math skills easily with us!</h3>
       <app-test></app-test>
     </div>
