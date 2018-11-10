@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { RestClient } from './Mocky/rest.client';
 import { SignInRegisterComponent } from './sign-in-register/sign-in-register.component';
+import { HeaderComponent } from './header/header.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
-    SignInRegisterComponent
+    SignInRegisterComponent,
+    HeaderComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

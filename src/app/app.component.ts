@@ -10,7 +10,6 @@ import {User} from './user';
 })
 
 export class AppComponent {
-  title = 'VGB Co.';
 
   public topListUsers;
  
