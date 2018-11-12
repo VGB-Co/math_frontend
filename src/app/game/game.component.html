@@ -1,0 +1,15 @@
+<div class="container">
+  <p>The progress of your made tasks:</p> 
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" id="taskprogressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      {{value_taskprogressbar}}%</div>
+  </div>
+</div>
+<div style="padding-top: 20px; padding-left: 90px;">
+  <h2 style="padding-bottom: 10px;">Your actual task is: </h2>
+  <div style="font-size: 15px;">
+    <a style="font-size: 20px;"> 4 + 5 = </a><input type="text" placeholder="Answer here" value="" style="padding-left: 20px; width: 130px;" #answerInput>
+    <button title="Submit my answer" id="answer-btn" (click)="clickOnSubmitAnswer()">Submit answer</button>
+  </div>
+  <div style="padding-top: 20px; font-style: italic;"> => Your answer: {{answerInput.value}} {{answer_string}}</div>
+</div>
