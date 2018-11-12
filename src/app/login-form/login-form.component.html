@@ -5,15 +5,16 @@
     <button id="logged_in_right" title="Sign out" (click)="clickOnSignOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</button>
   </div>
 
-<form (submit)="loginUser($event)" *ngIf="visible_loginUser">
+<form class="containerLogIn" (submit)="loginUser($event)" *ngIf="visible_loginUser">
   <h1><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</h1>
+  <h3 style="border-bottom: 50px">Please fill in this form to log in to your account.</h3>
   <div class="input">
     <label>Username</label>
-    <input type="text">
+    <input type="text" placeholder="Enter username" required>
   </div>
   <div class="input">
     <label>Password</label>
-    <input type="password">
+    <input type="password" placeholder="Enter password" required>
   </div>
   <div class="input">
     <input type="submit" value="Login" id="login_btn">
