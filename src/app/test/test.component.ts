@@ -4,7 +4,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
 selector: 'app-test',
-template:`<i> Welcome {{siteUrl.toUpperCase()}} ! </i>
+template:`
+  <h3>Solve mathematical tests and improve your math skills easily with us!</h3>
+  <i> Welcome {{siteUrl.toUpperCase()}} ! </i>
   <h3><span [style.color]="hasError ? 'green' : 'red'">Name: </span> <i> {{titleInput.value}}</i></h3>
   <input type="text"  #titleInput>
   <button type="submit" (click)="addTodo(titleInput.value)">Add</button>
@@ -16,7 +18,8 @@ template:`<i> Welcome {{siteUrl.toUpperCase()}} ! </i>
     <button class="diffchoser" (click)="selectMediumDiff()">Medium</button>
     or
     <button class="diffchoser" (click)="selectHardDiff()">Hard</button>
-  </p>`,
+  </p>
+  `,
   styles: []
 })
 export class TestComponent implements OnInit {
