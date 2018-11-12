@@ -2,37 +2,20 @@
 
   <app-header></app-header>
 
-  <!--login-formnak button vaygg kulon oldal-->
   <div class="left">
-    <a routerLink="/test" routerLinkActive="active" title="Back to the mainscreen!" (click)="clickOnMainScreen()"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-    <a routerLink="/game" routerLinkActive="active" title="Let's play" (click)="clickOnPlay()"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Let's play</a>
+    
+    <a routerLink="/login-form" title="Let's log in or register!" (click)="clickOnSignIn()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign in|out</a>
+    <a routerLink="/test" title="Back to the mainscreen!" (click)="clickOnMainScreen()"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+    <a routerLink="/game" title="Let's play" (click)="clickOnPlay()"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Let's play</a>
     <a routerLink="/ladeboard" title="See ladeboards!" (click)="clickOnLadeboard()"><i class="fa fa-trophy" aria-hidden="true"></i> Leaderboard </a>
-    <a routerLink="/ladeboard" title="Who we are?" (click)="clickOnAbout()"><i class="fa fa-question-circle" aria-hidden="true"></i> About</a>
+    <a routerLink="/about" title="Who we are?" (click)="clickOnAbout()"><i class="fa fa-question-circle" aria-hidden="true"></i> About</a>
+ 
   </div>
 
   <div class="middle">
 
     <router-outlet></router-outlet>
 
-    <div class="about" *ngIf="visible_About">
-        <h1>About us</h1>
-        <iframe width="430" height="230" src="https://www.youtube.com/embed/videoseries?list=PLonjrkjJyBBmznI7IRlHV7r9mLFFD1uK6" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <div id="team">
-          <li id="davelopers_title">Developers were:</li>
-          <li class="developers"><a href="https://github.com/Levivig" style="text-decoration: none"> > Víg Levente István as
-              IOS Developer</a></li>
-          <li class="developers"><a href="https://github.com/Fyccek" style="text-decoration: none"> > Gurmai István as the
-              Backend Developer</a></li>
-          <li class="developers"><a href="https://github.com/james9711" style="text-decoration: none"> > Berki Ádám as the
-              Frontend Developer</a></li>
-        </div>
-      </div>
-
   </div>
 
 </div>
-
-<a href="https://github.com/VGB-Co">
-  <img id="logo_bottom" title="Lets visit our GitHub! Have fun!" src="https://i.imgur.com/g9JdFG2.jpg" width="100"
-    height="100" alt="logo">
-</a>
