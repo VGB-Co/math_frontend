@@ -3,23 +3,8 @@ import { Component, OnInit } from '@angular/core';
 //ng generate module [name] -> create modules
 
 @Component({
-selector: 'app-test',
-template:`
-  <h3>Solve mathematical tests and improve your math skills easily with us!</h3>
-  <i> Welcome {{siteUrl.toUpperCase()}} ! </i>
-  <h3><span [style.color]="hasError ? 'green' : 'red'">Name: </span> <i> {{titleInput.value}}</i></h3>
-  <input type="text"  #titleInput>
-  <button type="submit" (click)="addTodo(titleInput.value)">Add</button>
-  
-  <p style="padding-top: 20px"> Please choose difficulity (easy | medium | hard) : {{greeting}} <p>
-  <p>
-    <button class="diffchoser" (click)="selectEasyDiff()">Easy</button>
-    or
-    <button class="diffchoser" (click)="selectMediumDiff()">Medium</button>
-    or
-    <button class="diffchoser" (click)="selectHardDiff()">Hard</button>
-  </p>
-  `,
+  selector: 'app-test',
+  templateUrl: './test.component.html',
   styles: []
 })
 export class TestComponent implements OnInit {
