@@ -65,6 +65,10 @@ body{
   transform: 0.5s;
 }
 
+a.active{
+  color: white;
+}
+
 #davelopers_title{
   font-size: 18px;
   font-weight: bold;
