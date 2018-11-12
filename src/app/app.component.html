@@ -6,66 +6,13 @@
   <div class="left">
     <a routerLink="/test" routerLinkActive="active" title="Back to the mainscreen!" (click)="clickOnMainScreen()"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
     <a routerLink="/game" routerLinkActive="active" title="Let's play" (click)="clickOnPlay()"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Let's play</a>
-    <a routerLink="/game" title="See ladeboards!" (click)="clickOnLadeboard()"><i class="fa fa-trophy" aria-hidden="true"></i> Leaderboard </a>
-    <a routerLink="/test" title="Who we are?" (click)="clickOnAbout()"><i class="fa fa-question-circle" aria-hidden="true"></i> About</a>
+    <a routerLink="/ladeboard" title="See ladeboards!" (click)="clickOnLadeboard()"><i class="fa fa-trophy" aria-hidden="true"></i> Leaderboard </a>
+    <a routerLink="/ladeboard" title="Who we are?" (click)="clickOnAbout()"><i class="fa fa-question-circle" aria-hidden="true"></i> About</a>
   </div>
 
   <div class="middle">
 
     <router-outlet></router-outlet>
-
-    <div class="ladeboard" *ngIf="visible_Ladeboard">
-      <h1>Leaderboard</h1>
-
-      <div class="container">
-          <p>
-            <span style="font-size: 20px; font-weight: bold;">Choose diff. level: </span>
-            <button class="diffchoser" (click)="showEasyLadeboard()">Easy</button>
-            or
-            <button class="diffchoser" (click)="showMediumLadeboard()">Medium</button>
-            or
-            <button class="diffchoser" (click)="showHardLadeboard()">Hard</button>
-          </p>
-          <form>
-            <label class="radio-inline">
-              <input type="radio" name="optradio" id="easy_radio" checked>Easy
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="optradio" id="medium_radio">Medium
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="optradio" id="hard_radio">Hard
-            </label>
-          </form>
-          <p style="padding-top: 20px">The following players were the quickest in the choosen difficulity level:</p>            
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Place</th>
-                <th>Player</th>
-                <th>Time (sec)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Levi</td>
-                <td>50.2</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Pista</td>
-                <td>51.4</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Berki</td>
-                <td>56.5</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-    </div>
 
     <div class="about" *ngIf="visible_About">
         <h1>About us</h1>
