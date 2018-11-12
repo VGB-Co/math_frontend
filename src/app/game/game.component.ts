@@ -25,17 +25,23 @@ export class GameComponent implements OnInit {
     this.value = value; 
     this.correct_answer = this.szam1 + this.szam2;
     var widthString = "";
-    this.made_tasks += 1;
-    this.value_taskprogressbar = 10 * this.made_tasks;
-    var pbValueString: string = String(this.value_taskprogressbar);
-    widthString="--pb-width: " + pbValueString + "%";
-    document.querySelector("body").style.cssText = widthString;
-
-    if(this.correct_answer == Number(this.value)) 
+    if (this.made_tasks<10)
     {
-      this.answer_string=" was correct! ";}
-    else{
-      this.answer_string=" was incorrect! ";}
+      this.made_tasks += 1;
+      this.value_taskprogressbar = 10 * this.made_tasks;
+      var pbValueString: string = String(this.value_taskprogressbar);
+      widthString="--pb-width: " + pbValueString + "%";
+      document.querySelector("body").style.cssText = widthString;
+  
+      if(this.correct_answer == Number(this.value)) 
+      {
+        this.answer_string=", was correct! ";}
+      else
+      {
+        this.answer_string=", was incorrect! ";
+      }
     }
-
+    else{
+      this.answer_string="eleeeeeeeeeeeeeeeeeeeeeeeeeeeeg maaaaaaaaaaaaaaaaar";
+    }
 }
