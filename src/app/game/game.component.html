@@ -9,8 +9,8 @@
 <div style="padding-top: 20px; padding-left: 90px;">
   <h2 style="padding-bottom: 10px;">Your actual task is: </h2>
   <div style="font-size: 15px;">
-    <a style="font-size: 20px;"> 4 + 5 = </a><input type="text" placeholder="Answer here" value="" style="padding-left: 20px; width: 130px;" #answerInput>
-    <button title="Submit my answer" id="answer-btn" (click)="clickOnSubmitAnswer()">Submit answer</button>
+    <a style="font-size: 20px;"> {{szam1}} + {{szam2}} = </a>
+    <input placeholder="Answer here" style="padding-left: 20px; width: 130px;" #box (keyup.enter)="onEnter(box.value)">
   </div>
-  <div style="padding-top: 20px; font-style: italic;"> => Your answer: {{answerInput.value}} {{answer_string}}</div>
+  <div style="padding-top: 20px; font-style: italic;"> => Your answer: {{value}} {{answer_string}}</div>
 </div>

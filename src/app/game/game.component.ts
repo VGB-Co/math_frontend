@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css']
 })
+
 export class GameComponent implements OnInit {
 
   constructor() { }
@@ -12,12 +13,17 @@ export class GameComponent implements OnInit {
   ngOnInit() {
   }
 
+  value='';
+  szam1=5;
+  szam2=10;
   made_tasks=0;
-  correct_answer=9;
+  correct_answer=0;
   answer_string='';
   value_taskprogressbar=0;
 
-  clickOnSubmitAnswer(){
+  onEnter(value: string) { 
+    this.value = value; 
+    this.correct_answer = this.szam1 + this.szam2;
     var widthString = "";
     this.made_tasks += 1;
     this.value_taskprogressbar = 10 * this.made_tasks;
@@ -25,14 +31,11 @@ export class GameComponent implements OnInit {
     widthString="--pb-width: " + pbValueString + "%";
     document.querySelector("body").style.cssText = widthString;
 
-    //todo - add typed value to ts for check
-    if(this.correct_answer == 9) 
+    if(this.correct_answer == Number(this.value)) 
     {
       this.answer_string=" was correct! ";}
     else{
       this.answer_string=" was incorrect! ";}
-
-    console.log(this.answer_string);
-  }
+    }
 
 }
