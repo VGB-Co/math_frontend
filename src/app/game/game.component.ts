@@ -20,6 +20,8 @@ export class GameComponent implements OnInit {
   correct_answer=0;
   answer_string='';
   value_taskprogressbar=0;
+  visible_game=true;
+  visible_gameSummary=false;
 
   onEnter(value: string) { 
     this.value = value; 
@@ -42,7 +44,22 @@ export class GameComponent implements OnInit {
       }
     }
     else{
-      this.answer_string="eleeeeeeeeeeeeeeeeeeeeeeeeeeeeg maaaaaaaaaaaaaaaaar";
+      this.visible_game=false;
+      this.visible_gameSummary=true;
     } 
+  }
+
+  startNewGame(){
+    var widthString = "";
+    this.value='';
+    this.made_tasks=0;
+    this.correct_answer=0;
+    this.answer_string='';
+    this.value_taskprogressbar=0;
+    var pbValueString: string = String(this.value_taskprogressbar);
+    widthString="--pb-width: " + pbValueString + "%";
+    document.querySelector("body").style.cssText = widthString;
+    this.visible_game=true;
+    this.visible_gameSummary=false;
   }
 }
