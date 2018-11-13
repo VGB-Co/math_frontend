@@ -40,9 +40,30 @@ export class LoginFormComponent implements OnInit {
 
     if(username == 'user' && password == 'user'){
       console.log('login success');
-      this.visible_loginUser = false;
-      this.visible_who_is_loggedIn = true;
       this.visible_loginOrRegisterUser=false;
+      this.visible_loginUser = false;
+      this.visible_registerUser=false;
+      this.visible_who_is_loggedIn = true;
+    }
+  }
+
+  registerUser(e){
+    e.preventDefault();
+    var email = e.target.elements[0].value;
+    var username = e.target.elements[1].value;
+    var password = e.target.elements[2].value;
+    var password2 = e.target.elements[3].value;
+    this.user = username;
+    console.log('email set: ' + email);
+    console.log('username set: ' + username);
+    console.log('password set: ' + password);
+
+    if(password == password2){
+      console.log('registration success');
+      this.visible_loginOrRegisterUser=false;
+      this.visible_loginUser = false;
+      this.visible_registerUser=false;
+      this.visible_who_is_loggedIn = true;
     }
   }
 
