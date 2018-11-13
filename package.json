@@ -32,6 +32,8 @@
     "express": "^4.16.4",
     "path": "^0.12.7",
     "rxjs": "~6.3.3",
+    "statman-stopwatch": "^2.7.0",
+    "ts-stopwatch": "0.0.4",
     "typescript": "~3.1.1",
     "zone.js": "~0.8.26"
   },

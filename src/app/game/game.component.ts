@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Stopwatch } from "ts-stopwatch";
 
 @Component({
   selector: 'app-game',
@@ -11,6 +12,7 @@ export class GameComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.startNewGame();
   }
 
   value='';
