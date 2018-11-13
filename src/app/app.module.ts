@@ -7,12 +7,16 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RestClient } from './Mocky/rest.client';
 
+import {AngularFireModule} from '@angular/fire';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule

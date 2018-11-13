@@ -23,6 +23,7 @@
   <div class="input">
     <input type="submit" value="Login" id="login_btn">
   </div>
+  <button (click)="login()">Login with Google</button>
 </form>
 
 <form class="containerRegister" (submit)="registerUser($event)" *ngIf="visible_registerUser">
