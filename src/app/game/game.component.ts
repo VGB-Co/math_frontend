@@ -18,6 +18,7 @@ export class GameComponent implements OnInit {
   szam2=10;
   made_tasks=0;
   correct_answer=0;
+  correct_answers=0;
   answer_string='';
   value_taskprogressbar=0;
   visible_game=true;
@@ -37,6 +38,7 @@ export class GameComponent implements OnInit {
   
       if(this.correct_answer == Number(this.value)) 
       {
+        this.correct_answers+=1;
         this.answer_string=", was correct! ";}
       else
       {

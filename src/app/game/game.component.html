@@ -19,6 +19,10 @@
 </div>
 
 <div *ngIf="visible_gameSummary">
-  <a>Game ended!</a>
-  <button (click)="startNewGame()">New game</button>
+  <div style="margin-bottom: 10px">
+    <li>Game ended!</li>
+    <li>Answered questions: {{made_tasks}}</li>
+    <li>Well answered questions: {{correct_answers}}</li>
+  </div>
+  <button style="right: 10px" class="basic_btn" (click)="startNewGame()">New game</button>
 </div>

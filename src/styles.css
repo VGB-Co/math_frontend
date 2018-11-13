@@ -100,11 +100,11 @@ a.active {
   height: 100%;
 }
 
-.diffchoser{
+.diffchoser, .basic_btn{
   width: 100px;
 }
 
-.diffchoser:hover{
+.diffchoser:hover, .basic_btn:hover{
   font-size: 110%;
   font-weight: bold;
   transition: 0.5s;
