@@ -10,6 +10,7 @@ export class LoginFormComponent implements OnInit {
   visible_loginUser=true;
   visible_registerUser=false;
   visible_who_is_loggedIn=false;
+  visible_loginOrRegisterUser=true;
   user = '';
 
   constructor() { }
@@ -18,11 +19,13 @@ export class LoginFormComponent implements OnInit {
   }
 
   clickOnLogIn(){
+    this.visible_loginOrRegisterUser=true;
     this.visible_loginUser=true;
     this.visible_registerUser=false;
   }
 
   clickOnRegister(){
+    this.visible_loginOrRegisterUser=true;
     this.visible_loginUser=false;
     this.visible_registerUser=true;
   }
@@ -39,12 +42,14 @@ export class LoginFormComponent implements OnInit {
       console.log('login success');
       this.visible_loginUser = false;
       this.visible_who_is_loggedIn = true;
+      this.visible_loginOrRegisterUser=false;
     }
   }
 
   clickOnSignOut(){
     this.user='';
     this.visible_who_is_loggedIn = false;
+    this.visible_loginOrRegisterUser=true;
     this.visible_loginUser = true;
   }
 

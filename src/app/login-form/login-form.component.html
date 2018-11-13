@@ -5,7 +5,7 @@
   <button id="logged_in_right" title="Sign out" (click)="clickOnSignOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</button>
 </div>
 
-<div class="containerLogInHeader">
+<div class="containerLogInHeader" *ngIf="visible_loginOrRegisterUser">
   <a id="login" (click)="clickOnLogIn()"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a>
   <a id="register" (click)="clickOnRegister()"><i class="fa fa-registered" aria-hidden="true"></i> Register</a>
 </div>
@@ -29,7 +29,7 @@
   <h3 style="border-bottom: 50px">Please fill in this form for registration.</h3>
   <div class="input">
     <label>Email</label>
-    <input type="text" placeholder="Enter email" required>
+    <input type="email" placeholder="Enter email" required>
   </div>
   <div class="input">
     <label>Username</label>
