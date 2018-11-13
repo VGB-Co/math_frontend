@@ -1,12 +1,16 @@
 <h1 class="topic_header">At first sign in or register</h1>
 
 <div id="logged_in" *ngIf="visible_who_is_loggedIn">
-    <a id="logged_in_left" >You are logged in as: <span style="color:green; font-weight: bold;">{{ user }}</span></a>
-    <button id="logged_in_right" title="Sign out" (click)="clickOnSignOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</button>
-  </div>
+  <a id="logged_in_left" >You are logged in as: <span style="color:green; font-weight: bold;">{{ user }}</span></a>
+  <button id="logged_in_right" title="Sign out" (click)="clickOnSignOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</button>
+</div>
+
+<div class="containerLogInHeader">
+  <a id="login" (click)="clickOnLogIn()"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a>
+  <a id="register" (click)="clickOnRegister()"><i class="fa fa-registered" aria-hidden="true"></i> Register</a>
+</div>
 
 <form class="containerLogIn" (submit)="loginUser($event)" *ngIf="visible_loginUser">
-  <h1><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</h1>
   <h3 style="border-bottom: 50px">Please fill in this form to log in to your account.</h3>
   <div class="input">
     <label>Username</label>
@@ -18,5 +22,28 @@
   </div>
   <div class="input">
     <input type="submit" value="Login" id="login_btn">
+  </div>
+</form>
+
+<form class="containerRegister" (submit)="registerUser($event)" *ngIf="visible_registerUser">
+  <h3 style="border-bottom: 50px">Please fill in this form for registration.</h3>
+  <div class="input">
+    <label>Email</label>
+    <input type="text" placeholder="Enter email" required>
+  </div>
+  <div class="input">
+    <label>Username</label>
+    <input type="text" placeholder="Enter username" required>
+  </div>
+  <div class="input">
+    <label>Password</label>
+    <input type="password" placeholder="Enter password" required>
+  </div>
+  <div class="input">
+    <label>Password again</label>
+    <input type="password" placeholder="Enter password again" required>
+  </div>
+  <div class="input">
+      <input type="submit" value="Register" id="register_btn">
   </div>
 </form>

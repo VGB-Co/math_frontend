@@ -43,5 +43,6 @@ export class GameComponent implements OnInit {
     }
     else{
       this.answer_string="eleeeeeeeeeeeeeeeeeeeeeeeeeeeeg maaaaaaaaaaaaaaaaar";
-    }
+    } 
+  }
 }

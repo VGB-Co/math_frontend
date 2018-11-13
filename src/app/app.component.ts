@@ -8,7 +8,7 @@ import {RestClient} from './Mocky/rest.client';
 })
 
 export class AppComponent {
- 
+
   constructor() { }
 
 }

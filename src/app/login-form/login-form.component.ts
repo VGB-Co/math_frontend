@@ -8,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class LoginFormComponent implements OnInit {
 
   visible_loginUser=true;
+  visible_registerUser=false;
   visible_who_is_loggedIn=false;
   user = '';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickOnLogIn(){
+    this.visible_loginUser=true;
+    this.visible_registerUser=false;
+  }
+
+  clickOnRegister(){
+    this.visible_loginUser=false;
+    this.visible_registerUser=true;
   }
 
   loginUser(e){
