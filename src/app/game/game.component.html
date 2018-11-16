@@ -13,7 +13,7 @@
     <div style="font-size: 15px;">
       <a style="font-size: 20px;"> {{szam1}} + {{szam2}} = </a>
       <input placeholder="Answer here" style="padding-left: 20px; width: 130px;" #box (keyup.enter)="onEnter(box.value)">
-      <a> (press ENTER for submit your answer)</a>
+      <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
     </div>
     <div style="padding-top: 20px; font-style: italic;"> => Your answer: {{value}} {{answer_string}}</div>
   </div>
@@ -21,9 +21,11 @@
 
 <div *ngIf="visible_gameSummary">
   <div style="margin-bottom: 10px">
-    <li>Game ended!</li>
-    <li>Answered questions: {{made_tasks}}</li>
-    <li>Well answered questions: {{correct_answers}}</li>
+    <blockquote class="blockquote">
+        <p class="mb-0">Game ended!</p>
+        <p class="mb-0">Answered questions: {{made_tasks}}</p>
+        <p class="mb-0">Well answered questions: {{correct_answers}}</p>
+    </blockquote>
   </div>
   <button style="right: 10px" class="basic_btn" (click)="startNewGame()">New game</button>
 </div>

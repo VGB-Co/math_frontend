@@ -29,6 +29,9 @@ export class LoginFormComponent implements OnInit {
     this.visible_loginOrRegisterUser=true;
     this.visible_loginUser=true;
     this.visible_registerUser=false;
+    //this.user=this.afAuth.user.toPromise.name;
+    //console.log(this.user);
+    //console.log(this.afAuth.user);
   }
 
   clickOnRegister(){

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Stopwatch } from "ts-stopwatch";
 
 @Component({
   selector: 'app-game',
