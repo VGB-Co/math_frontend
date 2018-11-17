@@ -51,9 +51,7 @@ div.input {
 }
 
 button:hover{
-	font-size: 110%;
 	font-weight: bold;
-	transition: 0.5s;
 }
 
 .containerLogInHeader{

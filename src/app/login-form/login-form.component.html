@@ -20,10 +20,11 @@
     <label>Password</label>
     <input type="password" placeholder="Enter password" required>
   </div>
-  <div class="input">
+  <div class="input" style="margin-bottom: 20px">
     <input type="submit" value="Login" id="login_btn">
   </div>
-  <button (click)="login()">Login with Google</button>
+  <a style="color:red; padding: 10px; text-align: center; font-size: 18px"> / or</a>
+  <button class="diffchoser" style="width: 45%" (click)="login()">Login with Google</button>
 </form>
 
 <form class="containerRegister" (submit)="registerUser($event)" *ngIf="visible_registerUser">

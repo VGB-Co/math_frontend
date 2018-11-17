@@ -102,12 +102,40 @@ a.active {
 
 .diffchoser, .basic_btn{
   width: 100px;
+  height: 40px;
+  border: 1px solid black;
+  background: none;
+  font-size: 15px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 5px;
+  text-align:center;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
 }
 
 .diffchoser:hover, .basic_btn:hover{
-  font-size: 110%;
+  color: black;
+  color: white;
   font-weight: bold;
-  transition: 0.5s;
+}
+
+.diffchoser::before, .basic_btn::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: black;
+  z-index: -1;
+  transition: 0.8s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.diffchoser:hover::before, .basic_btn:hover::before{
+  height: 180%;
 }
 
 img:hover{
