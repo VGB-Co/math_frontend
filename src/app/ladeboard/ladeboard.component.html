@@ -1,60 +1,31 @@
 <h1 class="topic_header">Leaderboard</h1>
 
-<div style="font-size: 20px; font-weight: bold; padding-bottom: 30px">Choose diff. level you would like to list: </div>
+<div style="font-size: 20px; font-weight: bold; padding-bottom: 30px">
+  Choose diff. level you would like to list: 
+  <p>
+      <button class="diffchoser" (click)="showEasyLadeboard()">Easy</button>
+      or
+      <button class="diffchoser" (click)="showMediumLadeboard()">Medium</button>
+      or
+      <button class="diffchoser" (click)="showHardLadeboard()">Hard</button>
+    </p>
+</div>
 
-<mat-tab-group>
+<mat-tab-group class="lvl_chooser_tab">
   <mat-tab label="lvl EASY">
     <ng-template matTabContent>
-      Easy-table
+        <app-data-table></app-data-table>
     </ng-template>
   </mat-tab>
   <mat-tab label="lvl MEDIUM">
     <ng-template matTabContent>
-      Medium-table
+        <app-data-table></app-data-table>
     </ng-template>
   </mat-tab>
   <mat-tab label="lvl HARD">
     <ng-template matTabContent>
-      Hard-table
+        <app-data-table></app-data-table>
     </ng-template>
   </mat-tab>
 </mat-tab-group>
-
-<div class="container">
-  <p>
-    <button class="diffchoser" (click)="showEasyLadeboard()">Easy</button>
-    or
-    <button class="diffchoser" (click)="showMediumLadeboard()">Medium</button>
-    or
-    <button class="diffchoser" (click)="showHardLadeboard()">Hard</button>
-  </p>
-
-  <p style="padding-top: 20px">The following players were the quickest in the choosen difficulity level:</p>            
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Place</th>
-        <th>Player</th>
-        <th>Time (sec)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Levi</td>
-        <td>50.2</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Pista</td>
-        <td>51.4</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Berki</td>
-        <td>56.5</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 

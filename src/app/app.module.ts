@@ -12,11 +12,13 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { MatTabsModule } from '@angular/material/tabs';
+import { DataTableComponent } from './data-table/data-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    DataTableComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
