@@ -69,21 +69,15 @@ button:hover{
 	width: 50%;
 }
 
-#login {
+#login, #register {
 	text-align: center;
-	font-size: 20px;
+    font-size: 25px;
 	text-decoration: none;
-	border-bottom: solid grey 3px;
+	border-bottom: solid rgba(88, 87, 87, 0.664) 3px;
   }
 
-#register {
-	text-align: center;
-	font-size: 20px;
-	text-decoration: none;
-	border-bottom: solid grey 3px;
-}
-
 #login:hover, #register:hover {
+	font-weight: bold;
 	cursor: -webkit-grab; cursor: grab;
-	border-bottom: solid rgba(180, 124, 19, 0.89) 5px;
+	border-bottom: solid #111 5px;
 }

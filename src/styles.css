@@ -12,11 +12,11 @@ body{
 }
 
 .container1 {
+  background: none;
     display: table;
     width: 100%;
     display: inline-block;
     height: 9rem;
-    border-bottom: 5px solid rgba(180, 124, 19, 0.89);
 }
 
 .left-half {

@@ -15,6 +15,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { HeaderComponent } from './header/header.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { DataTableComponent } from './data-table/data-table.component';
+import { LoginScreenComponent } from './login-screen/login-screen.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DataTableComponent } from './data-table/data-table.component';
     routingComponents,
     HeaderComponent,
     LeftMenuComponent,
-    DataTableComponent
+    DataTableComponent,
+    LoginScreenComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

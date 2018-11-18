@@ -1,0 +1,35 @@
+.split {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.left {
+    width: 40%;
+    left: 0;
+    background-color: #111;
+    color: whitesmoke;
+    font-weight: 100;
+    font-family: "Pacifico", cursive;
+}
+
+.right {
+    width: 60%;
+    right: 0;
+    background-color: none;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#login_form{
+    position: relative;
+    top: 30%;
+}
+  
