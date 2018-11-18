@@ -1,21 +1,17 @@
 <div class="container2">
 
-  <app-header></app-header>
+    <app-header></app-header>
+  
+    <div class="left">
+      
+        <app-left-menu></app-left-menu>
 
-  <div class="left">
-    
-    <a routerLink="/login-form" routerLinkActive="active" title="Let's log in or register!"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign in|out</a>
-    <a routerLink="/test" routerLinkActive="active" title="Back to the mainscreen!"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-    <a routerLink="/game" routerLinkActive="active" title="Let's play"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Let's play</a>
-    <a routerLink="/ladeboard" routerLinkActive="active" title="See ladeboards!"><i class="fa fa-trophy" aria-hidden="true"></i> Leaderboard </a>
-    <a routerLink="/about" routerLinkActive="active" title="Who we are?"><i class="fa fa-question-circle" aria-hidden="true"></i> About</a>
- 
+    </div>
+  
+    <div class="middle">
+  
+      <router-outlet></router-outlet>
+  
+    </div>
+  
   </div>
-
-  <div class="middle">
-
-    <router-outlet></router-outlet>
-
-  </div>
-
-</div>

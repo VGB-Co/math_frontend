@@ -12,12 +12,16 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { MatTabsModule } from '@angular/material/tabs';
+import { HeaderComponent } from './header/header.component';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { DataTableComponent } from './data-table/data-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
+    HeaderComponent,
+    LeftMenuComponent,
     DataTableComponent
   ],
   imports: [

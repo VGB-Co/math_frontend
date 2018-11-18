@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -16,7 +17,7 @@ export class LoginFormComponent implements OnInit {
   visible_loginOrRegisterUser=true;
   user = '';
 
-  constructor(public afAuth: AngularFireAuth) { }
+  constructor(private router: Router, public afAuth: AngularFireAuth) { }
 
   ngOnInit() {
   }
@@ -49,11 +50,15 @@ export class LoginFormComponent implements OnInit {
     console.log('password was: ' + password);
 
     if(username == 'user' && password == 'user'){
-      console.log('login success');
-      this.visible_loginOrRegisterUser=false;
-      this.visible_loginUser = false;
-      this.visible_registerUser=false;
-      this.visible_who_is_loggedIn = true;
+      this.router.navigate(['test']); 
+      console.log('login success as ' + this.user);
+      //this.visible_loginOrRegisterUser=false;
+      //this.visible_loginUser = false;
+      //this.visible_registerUser=false;
+      //this.visible_who_is_loggedIn = true;
+    }
+    else{
+      console.log('invalid log in');
     }
   }
 
@@ -64,16 +69,20 @@ export class LoginFormComponent implements OnInit {
     var password = e.target.elements[2].value;
     var password2 = e.target.elements[3].value;
     this.user = username;
-    console.log('email set: ' + email);
-    console.log('username set: ' + username);
-    console.log('password set: ' + password);
 
     if(password == password2){
-      console.log('registration success');
-      this.visible_loginOrRegisterUser=false;
-      this.visible_loginUser = false;
-      this.visible_registerUser=false;
-      this.visible_who_is_loggedIn = true;
+      this.router.navigate(['test']); 
+      console.log('email set: ' + email);
+      console.log('username set: ' + username);
+      console.log('password set: ' + password);
+      console.log('registration success as ' + this.user);
+      //this.visible_loginOrRegisterUser=false;
+      //this.visible_loginUser = false;
+      //this.visible_registerUser=false;
+      //this.visible_who_is_loggedIn = true;
+    }
+    else{
+      console.log('invalid registration');
     }
   }
 
