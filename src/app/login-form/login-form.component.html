@@ -9,7 +9,7 @@
 </div>
 
 <form class="containerLogIn" (submit)="loginUser($event)" *ngIf="visible_loginUser">
-  <h3 style="border-bottom: 50px">Please fill in this form to log in to your account.</h3>
+  <h3>Please fill in this form to log in to your account.</h3>
   <div class="input">
     <label>Username</label>
     <input type="text" placeholder="Enter username" required>
@@ -18,8 +18,8 @@
     <label>Password</label>
     <input type="password" placeholder="Enter password" required>
   </div>
-  <div class="input" style="margin-bottom: 20px">
-    <input type="submit" value="Login" id="login_btn">
+  <div style="margin-top: 20px">
+    <button class="diffchoser" style="width: 48%" id="login_btn">Login</button>
   </div>
   <a style="color:red; padding: 10px; text-align: center; font-size: 18px"> / or</a>
   <button class="diffchoser" style="width: 45%" (click)="login()">Login with Google</button>
@@ -43,7 +43,7 @@
     <label>Password again</label>
     <input type="password" placeholder="Enter password again" required>
   </div>
-  <div class="input">
-      <input type="submit" value="Register" id="register_btn">
+  <div style="margin-top: 20px">
+    <button class="diffchoser" style="width: 48%" id="register_btn">Register</button>
   </div>
 </form>
