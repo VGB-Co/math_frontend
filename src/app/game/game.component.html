@@ -1,31 +1,47 @@
-<h1 class="topic_header">Have fun</h1>
+<div class="container2">
 
-<div *ngIf="visible_game">
-  <div class="container">
-    <p>The progress of your made tasks:</p> 
-    <div class="progress">
-      <div class="progress-bar progress-bar-striped active" id="taskprogressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-        {{value_taskprogressbar}}%</div>
-    </div>
-  </div>
-  <div style="padding-top: 20px; padding-left: 90px;">
-    <h2 style="padding-bottom: 10px;">Your actual task is: </h2>
-    <div style="font-size: 15px;">
-      <a style="font-size: 20px;"> {{szam1}} + {{szam2}} = </a>
-      <input placeholder="Answer here" style="padding-left: 20px; width: 130px;" #box (keyup.enter)="onEnter(box.value)">
-      <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
-    </div>
-    <div style="padding-top: 20px; font-style: italic;"> => Your answer: {{value}} {{answer_string}}</div>
-  </div>
-</div>
+    <app-header></app-header>
 
-<div *ngIf="visible_gameSummary">
-  <div style="margin-bottom: 10px">
-    <blockquote class="blockquote">
-        <p class="mb-0">Game ended!</p>
-        <p class="mb-0">Answered questions: {{made_tasks}}</p>
-        <p class="mb-0">Well answered questions: {{correct_answers}}</p>
-    </blockquote>
-  </div>
-  <button style="right: 10px" class="basic_btn" (click)="startNewGame()">New game</button>
+    <div class="left">
+        
+        <app-left-menu></app-left-menu>
+
+    </div>
+
+    <div class="middle">
+
+        <h1 class="topic_header">Have fun</h1>
+
+        <div *ngIf="visible_game">
+          <div class="container">
+            <p>The progress of your made tasks:</p> 
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" id="taskprogressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                {{value_taskprogressbar}}%</div>
+            </div>
+          </div>
+          <div style="padding-top: 20px; padding-left: 90px;">
+            <h2 style="padding-bottom: 10px;">Your actual task is: </h2>
+            <div style="font-size: 15px;">
+              <a style="font-size: 20px;"> {{szam1}} + {{szam2}} = </a>
+              <input placeholder="Answer here" style="padding-left: 20px; width: 130px;" #box (keyup.enter)="onEnter(box.value)">
+              <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
+            </div>
+            <div style="padding-top: 20px; font-style: italic;"> => Your answer: {{value}} {{answer_string}}</div>
+          </div>
+        </div>
+
+        <div *ngIf="visible_gameSummary">
+          <div style="margin-bottom: 10px">
+            <blockquote class="blockquote">
+                <p class="mb-0">Game ended!</p>
+                <p class="mb-0">Answered questions: {{made_tasks}}</p>
+                <p class="mb-0">Well answered questions: {{correct_answers}}</p>
+            </blockquote>
+          </div>
+          <button style="right: 10px" class="basic_btn" (click)="startNewGame()">New game</button>
+        </div>
+
+    </div>
+
 </div>

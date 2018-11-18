@@ -1,53 +1,69 @@
-<h1 class="topic_header">Solve mathematical tests and improve your math skills easily with us!</h1>
+<div class="container2">
 
-<blockquote class="blockquote">
-    <p class="mb-0">WELCOME TO OUR NEW WEBSITE!</p>
-    <footer class="blockquote-footer">Your current URL is: <cite title="Source Title"> {{siteUrl.toUpperCase()}} </cite> !</footer>
-</blockquote>
+    <app-header></app-header>
 
-<blockquote class="blockquote">
-    <p class="mb-0">We hope you'll enjoy it, and we're sorry in advance to those we might upset with our mathematical tasks.</p>
-    <footer class="blockquote-footer">If you are not registered please register now, else log in to your existing account!</footer>
-</blockquote>
+    <div class="left">
+        
+        <app-left-menu></app-left-menu>
 
-<h3 style="margin-top: 40px">
-    <span [style.color]="hasError ? 'green' : 'red'">Name: </span> <i> {{titleInput.value}}</i>
-</h3>
-
-<input type="text"  #titleInput>
-<button type="submit" class="basic_btn" style="height: 35px" (click)="addTodo(titleInput.value)">Add</button>
-
-<p style="margin-top: 20px"> 
-    Please choose difficulity (easy | medium | hard) : {{greeting}} 
-<p>
-<p>
-  <button class="diffchoser" (click)="selectEasyDiff()">Easy</button>
-  or
-  <button class="diffchoser" (click)="selectMediumDiff()">Medium</button>
-  or
-  <button class="diffchoser" (click)="selectHardDiff()">Hard</button>
-</p>
-
-<div class="card" style="margin-top: 40px; margin-bottom: 20px">
-    <h5 class="card-header">Easy</h5>
-    <div class="card-body">
-        <h5 class="card-title">What easy difficulity level mean?</h5>
-        <p class="card-text">Tasks like 5+6...</p>
     </div>
+
+    <div class="middle">
+
+        <h1 class="topic_header">Solve mathematical tests and improve your math skills easily with us!</h1>
+
+        <blockquote class="blockquote">
+            <p class="mb-0">WELCOME TO OUR NEW WEBSITE!</p>
+            <footer class="blockquote-footer">Your current URL is: <cite title="Source Title"> {{siteUrl.toUpperCase()}} </cite> !</footer>
+        </blockquote>
+        
+        <blockquote class="blockquote">
+            <p class="mb-0">We hope you'll enjoy it, and we're sorry in advance to those we might upset with our mathematical tasks.</p>
+            <footer class="blockquote-footer">If you are not registered please register now, else log in to your existing account!</footer>
+        </blockquote>
+        
+        <h3 style="margin-top: 40px">
+            <span [style.color]="hasError ? 'green' : 'red'">Name: </span> <i> {{titleInput.value}}</i>
+        </h3>
+        
+        <input type="text"  #titleInput>
+        <button type="submit" class="basic_btn" style="height: 35px" (click)="addTodo(titleInput.value)">Add</button>
+        
+        <p style="margin-top: 20px"> 
+            Please choose difficulity (easy | medium | hard) : {{greeting}} 
+        <p>
+        <p>
+            <button class="diffchoser" (click)="selectEasyDiff()">Easy</button>
+            or
+            <button class="diffchoser" (click)="selectMediumDiff()">Medium</button>
+            or
+            <button class="diffchoser" (click)="selectHardDiff()">Hard</button>
+        </p>
+        
+        <div class="card" style="margin-top: 40px; margin-bottom: 20px">
+            <h5 class="card-header">Easy</h5>
+            <div class="card-body">
+                <h5 class="card-title">What easy difficulity level mean?</h5>
+                <p class="card-text">Tasks like 5+6...</p>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-bottom: 20px">
+            <h5 class="card-header">Medium</h5>
+            <div class="card-body">
+                <h5 class="card-title">What medium difficulity level mean?</h5>
+                <p class="card-text">Tasks like (5+6)-8</p>
+            </div>
+        </div>
+        
+        <div class="card" style="margin-bottom: 20px">
+            <h5 class="card-header">Hard</h5>
+            <div class="card-body">
+                <h5 class="card-title">What hard difficulity level mean?</h5>
+                <p class="card-text">Tasks like (5+6)-8*6</p>
+            </div>
+        </div> 
+
+    </div>
+
 </div>
-
-<div class="card" style="margin-bottom: 20px">
-    <h5 class="card-header">Medium</h5>
-    <div class="card-body">
-        <h5 class="card-title">What medium difficulity level mean?</h5>
-        <p class="card-text">Tasks like (5+6)-8</p>
-    </div>
-</div>
-
-<div class="card" style="margin-bottom: 20px">
-    <h5 class="card-header">Hard</h5>
-    <div class="card-body">
-        <h5 class="card-title">What hard difficulity level mean?</h5>
-        <p class="card-text">Tasks like (5+6)-8*6</p>
-    </div>
-</div> 
