@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 
 const routes: Routes = [
+    {path: '', redirectTo: '/login-screen', pathMatch: 'full'},
     {path: 'login-screen', component: LoginScreenComponent},
     {path: 'test', component: TestComponent},
     {path: 'login-form', component: LoginFormComponent},
