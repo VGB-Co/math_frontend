@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-//ng generate module [name] -> create modules
-
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -9,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  public name = "Guests";
   public siteUrl = window.location.href;
   public myId = "testId";
   public hasError = true;
@@ -18,7 +15,19 @@ export class TestComponent implements OnInit {
 
   constructor() { }
 
+  user='';
+
   ngOnInit() {
+    this.getUser();
+  }
+
+  getUser(){
+    if(localStorage){
+      if(this.user!=null){
+        this.user = localStorage.getItem('LoggedUser');
+        console.log(this.user + ' succesfully logged in!');
+      } 
+    }
   }
 
   addTodo(title:string) {

@@ -46,7 +46,8 @@ export class LoginFormComponent implements OnInit {
     console.log('password was: ' + password);
 
     if(username == 'user' && password == 'user'){
-      this.router.navigate(['test']); 
+      localStorage.setItem('LoggedUser',this.user); 
+      this.router.navigate(['test']);
       console.log('login success as ' + this.user);
       //this.visible_loginOrRegisterUser=false;
       //this.visible_loginUser = false;
