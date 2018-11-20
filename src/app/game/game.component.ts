@@ -14,6 +14,24 @@ export class GameComponent implements OnInit {
     this.startNewGame();
   }
 
+  timeLeft: number = 60;
+  interval;
+
+  startTimer() {
+    this.interval = setInterval(() => {
+      this.timeLeft++;
+    },10)
+  }
+
+  pauseTimer() {
+    clearInterval(this.interval);
+  }
+
+  reset() {
+    clearInterval(this.interval);
+    this.timeLeft = 0;
+  }
+
   value='';
   szam1=5;
   szam2=10;
@@ -49,10 +67,12 @@ export class GameComponent implements OnInit {
     else{
       this.visible_game=false;
       this.visible_gameSummary=true;
+      this.pauseTimer();
     } 
   }
 
   startNewGame(){
+    this.startTimer();
     var widthString = "";
     this.value='';
     this.made_tasks=0;
