@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
+import { LogRegFormsComponent } from './log-reg-forms/log-reg-forms.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoginScreenComponent } from './login-screen/login-screen.component';
     HeaderComponent,
     LeftMenuComponent,
     DataTableComponent,
-    LoginScreenComponent
+    LoginScreenComponent,
+    LogRegFormsComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

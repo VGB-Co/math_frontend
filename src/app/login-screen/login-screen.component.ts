@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginScreenComponent implements OnInit {
 
+  visibleLogin = true;
+  visibleRegister = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  login(){
+    this.visibleLogin = true;
+    this.visibleRegister = false;
+    console.log("log in clicked");
+  }
+
+  register(){
+    this.visibleRegister = true;
+    this.visibleLogin = false;
+    console.log("resgister clicked");
   }
 
 }

@@ -3,12 +3,19 @@
     <div class="centered">
       <h1>Welcome to VGB Co.</h1>
       <h3>- please log in or register first -</h3>
+      <div style="margin-top: 40px;">
+        <button class="basic_btn" id="btn_login_screen1" (click)="login()">Log in</button>
+        <button class="basic_btn" id="btn_login_screen2" (click)="register()">Registration</button>
+      </div>
     </div>
   </div>
   
   <div class="split right">
-    <div id="login_form">
+    <div id="login_form" *ngIf="visibleLogin">
       <app-login-form></app-login-form>
+    </div>
+    <div id="login_form" *ngIf="visibleRegister">
+      <app-log-reg-forms></app-log-reg-forms>
     </div>
   </div>
 </div>
