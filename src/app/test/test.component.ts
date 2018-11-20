@@ -24,7 +24,7 @@ export class TestComponent implements OnInit {
   getUser(){
     if(localStorage){
       if(this.user!=null){
-        this.user = localStorage.getItem('LoggedUser');
+        this.user=localStorage.getItem('LoggedUser');
         console.log(this.user + ' succesfully logged in!');
       } 
     }

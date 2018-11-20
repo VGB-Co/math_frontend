@@ -165,7 +165,8 @@ img:hover{
 
 .topic_header {
   padding-bottom: 50px;
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: bold;
   color: #ad8956;
 }
 

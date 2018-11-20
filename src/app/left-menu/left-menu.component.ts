@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftMenuComponent implements OnInit {
 
+  user='';
+
   constructor() { }
 
   ngOnInit() {
+    this.getUser();
+  }
+
+  getUser(){
+    if(localStorage){
+      if(this.user!=null){
+        this.user=localStorage.getItem('LoggedUser');
+      } 
+    }
   }
 
 }

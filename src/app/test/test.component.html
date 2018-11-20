@@ -26,7 +26,7 @@
             <span [style.color]="hasError ? 'green' : 'red'">Name: </span> <i> {{titleInput.value}}</i>
         </h3>
         
-        <input type="text"  #titleInput>
+        <input type="text" #titleInput>
         <button type="submit" class="basic_btn" style="height: 35px" (click)="addTodo(titleInput.value)">Add</button>
         
         <p style="margin-top: 20px"> 
