@@ -5,23 +5,24 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface DataTableItem {
-  name: string;
+  username: string;
   id: number;
+  time: number;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: DataTableItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
+  {id: 1, username: 'Hydrogen', time: 10.2},
+  {id: 2, username: 'Helium', time: 11.8},
+  {id: 3, username: 'Lithium', time: 9.7},
+  {id: 4, username: 'Beryllium', time: 10},
+  {id: 5, username: 'Boron', time: 13},
+  {id: 6, username: 'Carbon', time: 14.4},
+  {id: 7, username: 'Nitrogen', time: 16.1},
+  {id: 8, username: 'Oxygen', time: 20.4},
+  {id: 9, username: 'Fluorine', time: 5.6},
+  {id: 10, username: 'Neon', time: 4.4},
+  {id: 11, username: 'Sodium', time: 10.9},
 ];
 
 /**
@@ -85,8 +86,9 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
+        case 'name': return compare(a.username, b.username, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'time': return compare(+a.time, +b.time, isAsc);
         default: return 0;
       }
     });

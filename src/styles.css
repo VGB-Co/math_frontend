@@ -105,6 +105,7 @@ a.active {
   width: 100px;
   height: 40px;
   border: 1px solid black;
+  border-radius: 4px;
   background: none;
   font-size: 15px;
   font-family: "montserrat";
@@ -148,7 +149,7 @@ a.active {
   border-radius: 0 0 50% 50%;
 }
 
-#btn_login_screen1:hover, #btn_login_screen2:hover {
+#btn_login_screen1:before, #btn_login_screen2:before {
   background: whitesmoke;
 }
 
