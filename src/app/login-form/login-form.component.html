@@ -1,14 +1,4 @@
-<div id="logged_in" *ngIf="visible_who_is_loggedIn">
-  <a id="logged_in_left" >You are logged in as: <span style="color:green; font-weight: bold;">{{ user }}</span></a>
-  <button id="logged_in_right" title="Sign out" (click)="clickOnSignOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</button>
-</div>
-
-<div class="containerLogInHeader" *ngIf="visible_loginOrRegisterUser">
-  <a id="login" (click)="clickOnLogIn()"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</a>
-  <a id="register" (click)="clickOnRegister()"><i class="fa fa-registered" aria-hidden="true"></i> Register</a>
-</div>
-
-<form class="containerLogIn" (submit)="loginUser($event)" *ngIf="visible_loginUser">
+<form class="containerLogIn" (submit)="loginUser($event)">
   <h3>Please fill in this form to log in to your account.</h3>
   <div class="input">
     <label>Username</label>
@@ -19,31 +9,8 @@
     <input type="password" placeholder="Enter password" required>
   </div>
   <div style="margin-top: 20px">
-    <button class="diffchoser" style="width: 48%" id="login_btn">Login</button>
-  </div>
-  <a style="color:red; padding: 10px; text-align: center; font-size: 18px"> / or</a>
-  <button class="diffchoser" style="width: 45%" (click)="login()">Login with Google</button>
-</form>
-
-<form class="containerRegister" (submit)="registerUser($event)" *ngIf="visible_registerUser">
-  <h3 style="border-bottom: 50px">Please fill in this form for registration.</h3>
-  <div class="input">
-    <label>Email</label>
-    <input type="email" placeholder="Enter email" required>
-  </div>
-  <div class="input">
-    <label>Username</label>
-    <input type="text" placeholder="Enter username" required>
-  </div>
-  <div class="input">
-    <label>Password</label>
-    <input type="password" placeholder="Enter password" required>
-  </div>
-  <div class="input">
-    <label>Password again</label>
-    <input type="password" placeholder="Enter password again" required>
-  </div>
-  <div style="margin-top: 20px">
-    <button class="diffchoser" style="width: 48%" id="register_btn">Register</button>
+    <button class="diffchoser" style="width: 22%" id="login_btn">Login</button>
+    <a style="margin-left: 5px; margin-right: 5px; font-size: 18px"> or</a>
+    <button class="diffchoser" style="width: 22%" (click)="login()">Login with Google</button>
   </div>
 </form>

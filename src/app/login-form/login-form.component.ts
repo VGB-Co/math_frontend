@@ -13,8 +13,6 @@ export class LoginFormComponent implements OnInit {
 
   visible_loginUser=true;
   visible_registerUser=false;
-  visible_who_is_loggedIn=false;
-  visible_loginOrRegisterUser=true;
   user = '';
 
   constructor(private router: Router, public afAuth: AngularFireAuth) { }
@@ -27,7 +25,6 @@ export class LoginFormComponent implements OnInit {
   }
 
   clickOnLogIn(){
-    this.visible_loginOrRegisterUser=true;
     this.visible_loginUser=true;
     this.visible_registerUser=false;
     //this.user=this.afAuth.user.toPromise.name;
@@ -36,7 +33,6 @@ export class LoginFormComponent implements OnInit {
   }
 
   clickOnRegister(){
-    this.visible_loginOrRegisterUser=true;
     this.visible_loginUser=false;
     this.visible_registerUser=true;
   }
@@ -62,34 +58,8 @@ export class LoginFormComponent implements OnInit {
     }
   }
 
-  registerUser(e){
-    e.preventDefault();
-    var email = e.target.elements[0].value;
-    var username = e.target.elements[1].value;
-    var password = e.target.elements[2].value;
-    var password2 = e.target.elements[3].value;
-    this.user = username;
-
-    if(password == password2){
-      this.router.navigate(['test']); 
-      console.log('email set: ' + email);
-      console.log('username set: ' + username);
-      console.log('password set: ' + password);
-      console.log('registration success as ' + this.user);
-      //this.visible_loginOrRegisterUser=false;
-      //this.visible_loginUser = false;
-      //this.visible_registerUser=false;
-      //this.visible_who_is_loggedIn = true;
-    }
-    else{
-      console.log('invalid registration');
-    }
-  }
-
   clickOnSignOut(){
     this.user='';
-    this.visible_who_is_loggedIn = false;
-    this.visible_loginOrRegisterUser=true;
     this.visible_loginUser = true;
   }
 
