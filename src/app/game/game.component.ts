@@ -27,7 +27,7 @@ export class GameComponent implements OnInit {
     clearInterval(this.interval);
   }
 
-  reset() {
+  resetTimer() {
     clearInterval(this.interval);
     this.timeLeft = 0;
   }
@@ -71,8 +71,12 @@ export class GameComponent implements OnInit {
     } 
   }
 
-  startNewGame(){
+  clickOnInputField(){
     this.startTimer();
+  }
+
+  startNewGame(){
+    this.resetTimer();
     var widthString = "";
     this.value='';
     this.made_tasks=0;

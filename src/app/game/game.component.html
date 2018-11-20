@@ -14,18 +14,20 @@
 
         <div *ngIf="visible_game">
           <div class="container">
-            <p>The progress of your made tasks:</p> 
+            <h4>The progress of your made tasks:</h4> 
             <div class="progress">
               <div class="progress-bar progress-bar-striped active" id="taskprogressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
                 {{value_taskprogressbar}}%</div>
             </div>
           </div>
+          <div class="container">
+            <h4>Time: <span style="font-style: italic; font-size: 20px">{{timeLeft/100}}</span> s</h4> 
+          </div>
           <div style="padding-top: 20px; padding-left: 90px;">
-            <p>{{timeLeft/100}} Seconds Left....</p> 
-            <h2 style="padding-bottom: 10px;">Your actual task is: </h2>
+            <h3 style="padding-bottom: 10px;">Your actual task is: </h3>
             <div style="font-size: 15px;">
               <a style="font-size: 20px;"> {{szam1}} + {{szam2}} = </a>
-              <input placeholder="Answer here" style="padding-left: 20px; width: 130px;" #box (keyup.enter)="onEnter(box.value)">
+              <input placeholder="Answer here" style="padding-left: 20px; width: 130px;" #box (keyup.enter)="onEnter(box.value)" (click)="clickOnInputField()">
               <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
             </div>
             <div style="padding-top: 20px; font-style: italic;"> => Your answer: {{value}} {{answer_string}}</div>
