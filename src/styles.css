@@ -176,3 +176,8 @@ img:hover{
 #taskprogressbar{
   width: var(--pb-width);
 }
+
+.mainScreen_keyword{
+	text-transform: uppercase;
+	font-weight: bold;
+}

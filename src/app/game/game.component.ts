@@ -35,9 +35,10 @@ export class GameComponent implements OnInit {
   value='';
   szam1=5;
   szam2=10;
-  made_tasks=0;
+  made_tasks=1;
   correct_answer=0;
   correct_answers=0;
+  public answer_correction=true;
   answer_string='';
   value_taskprogressbar=0;
   visible_game=true;
@@ -47,22 +48,24 @@ export class GameComponent implements OnInit {
     this.value = value; 
     this.correct_answer = this.szam1 + this.szam2;
     var widthString = "";
+    if(this.correct_answer == Number(this.value)) 
+    {
+      this.correct_answers+=1;
+      this.answer_string=', was true! :)';
+      this.answer_correction=true;}
+    else
+    {
+      this.answer_string=', was false! :/';
+      this.answer_correction=false;
+    }
+
     if (this.made_tasks<10)
     {
       this.made_tasks += 1;
-      this.value_taskprogressbar = 10 * this.made_tasks;
+      this.value_taskprogressbar = 10 * (this.made_tasks-1);
       var pbValueString: string = String(this.value_taskprogressbar);
       widthString="--pb-width: " + pbValueString + "%";
       document.querySelector("body").style.cssText = widthString;
-  
-      if(this.correct_answer == Number(this.value)) 
-      {
-        this.correct_answers+=1;
-        this.answer_string=", was correct! ";}
-      else
-      {
-        this.answer_string=", was incorrect! ";
-      }
     }
     else{
       this.visible_game=false;
@@ -79,9 +82,10 @@ export class GameComponent implements OnInit {
     this.resetTimer();
     var widthString = "";
     this.value='';
-    this.made_tasks=0;
-    this.correct_answer=0;
+    this.made_tasks=1;
+    this.correct_answers=0;
     this.answer_string='';
+    this.answer_correction=true;
     this.value_taskprogressbar=0;
     var pbValueString: string = String(this.value_taskprogressbar);
     widthString="--pb-width: " + pbValueString + "%";

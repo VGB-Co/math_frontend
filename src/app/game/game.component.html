@@ -23,21 +23,28 @@
           <div class="container">
             <h4>Time: <span style="font-style: italic; font-size: 20px">{{timeLeft/100}}</span> s</h4> 
           </div>
-          <div style="padding-top: 20px; padding-left: 90px;">
+          <div style="padding-top: 20px; padding-left: 90px; padding-bottom: 20px">
             <h3 style="padding-bottom: 10px;">Your actual task is: </h3>
-            <div style="font-size: 15px;">
-              <a style="font-size: 20px;"> {{szam1}} + {{szam2}} = </a>
-              <input placeholder="Answer here" style="padding-left: 20px; width: 130px;" #box (keyup.enter)="onEnter(box.value)" (click)="clickOnInputField()">
+            <div style="font-size: 15px">
+              <a style="font-size: 20px;"> {{made_tasks}}. feladat:  </a>
+            </div>
+            <div style="text-align: center; padding-bottom: 20px">
+              <a id="task">{{szam1}} + {{szam2}} = </a>
+              <input id="answerInput" placeholder="Answer here" #box (keyup.enter)="onEnter(box.value)" (click)="clickOnInputField()">
               <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
             </div>
-            <div style="padding-top: 20px; font-style: italic;"> => Your answer: {{value}} {{answer_string}}</div>
+            <div class="card" id="answerCard" [style.color]="answer_correction ? 'green' : 'red'">
+              <div class="card-body">
+                Your answer: {{value}} {{answer_string}}
+              </div>
+            </div> 
           </div>
         </div>
 
         <div *ngIf="visible_gameSummary">
           <div style="margin-bottom: 10px">
             <blockquote class="blockquote">
-                <p class="mb-0">Game ended!</p>
+                <p class="mb-0" style="font-weight: bold; font-size: 15px;">Game ended!</p>
                 <p class="mb-0">Answered questions: {{made_tasks}}</p>
                 <p class="mb-0">Well answered questions: {{correct_answers}}</p>
                 <p class="mb-0">Your time was: {{timeLeft/100}} seconds</p>
