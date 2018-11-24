@@ -40,13 +40,14 @@ body{
 }
 
 .left {
+  position: absolute;
   font-family: "Pacifico", cursive;
+  top: 14rem;
   padding-top: 2rem;
   left: 0px;
   text-align: left;
   width: 15%;
   height: 120%;
-  position: absolute;
   z-index: 1;
   background-color: #111;
   overflow-x: hidden;
@@ -93,10 +94,12 @@ a.active {
 }
 
 .middle {
-  line-height: 2;
-  right: 0px;
   text-align: left;
   position: absolute;
+  line-height: 2;
+  top: 15rem;
+  right: 0px;
+  padding-top: 2rem;
   width: 82%;
   height: 100%;
 }

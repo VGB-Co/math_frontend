@@ -1,0 +1,9 @@
+.left-half h1{
+    animation: text 2s 1;
+}
+  
+@keyframes text{
+    30%{
+        letter-spacing: 2px;
+    }
+}

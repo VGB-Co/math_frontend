@@ -1,5 +1,6 @@
 .split {
     height: 100%;
+    top: 0rem;
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
@@ -26,10 +27,44 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
 }
 
 #login_form{
     position: relative;
     top: 30%;
 }
+
+#container_mainScreen span{
+    color: whitesmoke;
+    text-transform: uppercase;
+    display: block;
+}
+
+.text1{
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    animation: text 3s 1;
+    position: relative;
+}
+
+.text2{
+    font-size: 30px;
+    font-weight: 800;
+}
   
+@keyframes text{
+    0%{
+        margin-bottom: - 40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -20px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -20px;
+    }
+}
