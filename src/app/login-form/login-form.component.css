@@ -32,3 +32,9 @@ div.input {
 button:hover{
 	font-weight: bold;
 }
+
+.inputField{
+	border: 2px solid rgba(185, 185, 185, 0.726);
+    border-radius: 15px 30px;
+    font-size: 20px;
+}

@@ -9,7 +9,6 @@ export class TestComponent implements OnInit {
 
   public siteUrl = window.location.href;
   public myId = "testId";
-  public hasError = true;
   public greeting = '';
   public choosenLvl = '';
 
@@ -28,10 +27,6 @@ export class TestComponent implements OnInit {
         console.log(this.user + ' succesfully logged in!');
       } 
     }
-  }
-
-  addTodo(title:string) {
-    console.log(title);
   }
 
   selectEasyDiff(){

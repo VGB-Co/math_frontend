@@ -22,13 +22,6 @@
             <footer class="blockquote-footer" style="font-size: 16px">If you are not registered please register now, else log in to your existing account!</footer>
         </blockquote>
         
-        <h3 style="margin-top: 40px">
-            <span [style.color]="hasError ? 'green' : 'red'">Name: </span> <i> {{titleInput.value}}</i>
-        </h3>
-        
-        <input type="text" #titleInput>
-        <button type="submit" class="basic_btn" style="height: 35px" (click)="addTodo(titleInput.value)">Add</button>
-        
         <p style="margin-top: 20px"> 
             Please choose difficulity (easy | medium | hard) : {{greeting}} 
         <p>

@@ -171,6 +171,18 @@ img:hover{
   font-size: 28px;
   font-weight: bold;
   color: #ad8956;
+  animation: typing-text 4s steps(80);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes typing-text{
+  from{
+    width: 0%;
+  }
+  to{
+    width: 100%;
+  }
 }
 
 #taskprogressbar{
