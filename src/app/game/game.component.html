@@ -29,13 +29,16 @@
               <a style="font-size: 20px;"> {{made_tasks}}. feladat:  </a>
             </div>
             <div style="text-align: center; padding-bottom: 20px">
-              <a id="task">{{szam1}} + {{szam2}} = </a>
+              <a id="task">{{feladat}} </a>
               <input id="answerInput" placeholder="Answer here" #box (keyup.enter)="onEnter(box.value)" (click)="clickOnInputField()">
               <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
             </div>
-            <div class="card" id="answerCard" [style.color]="answer_correction ? 'green' : 'red'">
-              <div class="card-body">
-                Your answer: {{value}} {{answer_string}}
+            <div class="card" id="answerCard">
+              <div class="card-header">
+                  Here you can see if your previous answer was correct or not:
+              </div>
+              <div class="card-body" [style.color]="answer_correction ? 'green' : 'red'" style="height: 60px;">
+                  {{answer_string}}
               </div>
             </div> 
           </div>

@@ -35,6 +35,7 @@ export class GameComponent implements OnInit {
   value='';
   szam1=5;
   szam2=10;
+  feladat = this.szam1 + ' + ' + this.szam2 + ' = ';
   made_tasks=1;
   correct_answer=0;
   correct_answers=0;
@@ -51,11 +52,11 @@ export class GameComponent implements OnInit {
     if(this.correct_answer == Number(this.value)) 
     {
       this.correct_answers+=1;
-      this.answer_string=', was true! :)';
+      this.answer_string = this.feladat + this.value + ' | correct answer: ' + this.correct_answer + ' -> your answer was TRUE!';
       this.answer_correction=true;}
     else
     {
-      this.answer_string=', was false! :/';
+      this.answer_string = this.feladat + this.value + ' | correct answer: ' + this.correct_answer + ' -> your answer was FALSE! :)';
       this.answer_correction=false;
     }
 
