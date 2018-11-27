@@ -11,39 +11,11 @@ body{
     --pb-width: 0%;
 }
 
-.container1 {
-    background: none;
-    display: table;
-    width: 100%;
-    display: inline-block;
-    height: 10rem;
-}
-
-.left-half {
-  height: inherit;
-  top:20px;
-  left:40px;
-  text-align: left;
-  position: absolute;
-  color: whitesmoke;
-  width: 50%;
-  font-weight: 200;
-  font-family: "Pacifico", cursive;
-}
-
-.right-half {
-  height: inherit;
-  text-align: right;
-  position: absolute;
-  right: 20px;
-  width: 50%;
-}
-
 .left {
   position: absolute;
   font-family: "Pacifico", cursive;
-  top: 14rem;
-  padding-top: 2rem;
+  top: 0rem;
+  padding-top: 14rem;
   left: 0px;
   text-align: left;
   width: 15%;
@@ -72,19 +44,10 @@ a.active {
   color: white;
 }
 
-#davelopers_title{
+#aboutTitle{
   font-size: 18px;
   font-weight: bold;
   margin-top: 20px;
-}
-
-.developers{
-  font-size: 16px;
-  font-style: italic;
-}
-
-.developers:hover{
-  font-weight: bold;
 }
 
 .container2 {
@@ -183,10 +146,6 @@ img:hover{
   to{
     width: 100%;
   }
-}
-
-#taskprogressbar{
-  width: var(--pb-width);
 }
 
 .mainScreen_keyword{

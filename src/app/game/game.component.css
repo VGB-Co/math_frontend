@@ -4,6 +4,16 @@
     font-size: 18px;
     font-weight: 600;
     font-style: italic;
+    animation: cardAnimation 2s;
+}
+
+@keyframes cardAnimation{
+    from{
+        left: 100px;
+    }
+    to{
+        left: 0px;
+    }
 }
 
 #task{
@@ -21,4 +31,11 @@
     text-align: center;
     font-size: 20px;
     width: 200px;
+}
+
+#taskprogressbar{
+    color: black;
+    font-weight: bold;
+    background-color: rgba(77, 153, 33, 0.801);
+    width: var(--pb-width);
 }

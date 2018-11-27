@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class GameComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.startNewGame();
@@ -44,8 +45,10 @@ export class GameComponent implements OnInit {
   value_taskprogressbar=0;
   visible_game=true;
   visible_gameSummary=false;
+  answeredCardNeeded=false;
 
-  onEnter(value: string) { 
+  onEnter(value: string) {
+    this.answeredCardNeeded=true; 
     this.value = value; 
     this.correct_answer = this.szam1 + this.szam2;
     var widthString = "";
@@ -93,5 +96,11 @@ export class GameComponent implements OnInit {
     document.querySelector("body").style.cssText = widthString;
     this.visible_game=true;
     this.visible_gameSummary=false;
+    this.answeredCardNeeded=false;
   }
+
+  backToHome(){
+    this.router.navigate(['test']);
+  }
+
 }

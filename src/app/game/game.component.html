@@ -10,7 +10,7 @@
 
     <div class="middle">
 
-        <h1 class="topic_header">Have fun</h1>
+        <h1 class="topic_header">Lets play & have fun (be quick with your answers, our stopwatch never rests)</h1>
 
         <div *ngIf="visible_game">
           <div class="container">
@@ -33,11 +33,11 @@
               <input id="answerInput" placeholder="Answer here" #box (keyup.enter)="onEnter(box.value)" (click)="clickOnInputField()">
               <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
             </div>
-            <div class="card" id="answerCard">
+            <div class="card" id="answerCard" *ngIf="answeredCardNeeded">
               <div class="card-header">
                   Here you can see if your previous answer was correct or not:
               </div>
-              <div class="card-body" [style.color]="answer_correction ? 'green' : 'red'" style="height: 60px;">
+              <div class="card-body" [style.color]="answer_correction ? 'rgba(77, 153, 33, 0.801)' : 'rgba(146, 39, 20, 0.801)'" style="height: 60px;">
                   {{answer_string}}
               </div>
             </div> 
@@ -53,7 +53,8 @@
                 <p class="mb-0">Your time was: {{timeLeft/100}} seconds</p>
             </blockquote>
           </div>
-          <button style="right: 10px" class="basic_btn" (click)="startNewGame()">New game</button>
+          <button style="right: 10px; width: auto" class="basic_btn" (click)="startNewGame()">Start new game</button>
+          <button style="right: 10px; width: auto" class="basic_btn" (click)="backToHome()">Back to HOME</button>
         </div>
 
     </div>
