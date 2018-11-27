@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {RestClient} from './Mocky/rest.client';
 
 @Component({
   selector: 'app-root',

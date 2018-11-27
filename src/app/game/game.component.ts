@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {RestClient} from '../Mocky/rest.client';
+import { Task } from '../Models/task';
 
 @Component({
   selector: 'app-game',
@@ -9,10 +11,27 @@ import { Router } from '@angular/router';
 
 export class GameComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private restClient: RestClient) { }
 
   ngOnInit() {
     this.startNewGame();
+    this.getTasksFor(0);
+  }
+
+  getTasksFor(difficulty) {
+    this.restClient.getTasksFor(difficulty).subscribe(
+    data => {
+              var tasks = new Array<Task>();
+              data.forEach(task => {
+                let curr_task = new Task(task);
+                tasks.push(curr_task);
+              });
+              // this.topListUsers=users;
+              console.log(tasks);
+            },
+    err => console.error(err),
+    () => console.log('other')
+  );
   }
 
   timeLeft: number = 60;

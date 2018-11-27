@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RestClient} from '../Mocky/rest.client';
-import {User} from '../user';
+import {User} from '../Models/user';
 
 @Component({
   selector: 'app-ladeboard',

@@ -15,4 +15,8 @@ export class RestClient {
         //TODO: use level parameter in http get
         return this.http.get('https://www.mocky.io/v2/5bc244243100004e001fca81');
     }
+
+    getTasksFor(difficulty) {
+        return this.http.get('http://172.20.10.3:8000/api/tasks');
+    }
 }
