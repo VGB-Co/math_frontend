@@ -24,14 +24,14 @@ export class GameComponent implements OnInit {
     this.restClient.getTasksFor(difficulty).subscribe(
     data => {
               var tasks = new Array<Task>();
-              data.forEach(task => {
+              var response = data as Array<any>;
+              response.forEach(task => {
                 let curr_task = new Task(task);
                 tasks.push(curr_task);
               });
-              // this.topListUsers=users;
               console.log(tasks);
               this.tasks = tasks;
-              this.feladat = this.tasks[0].question;
+              this.feladat = this.tasks[0].question + ' = ';
               this.correct_answer = this.tasks[0].correct_answer;
             },
     err => console.error(err),
@@ -99,8 +99,7 @@ export class GameComponent implements OnInit {
       this.visible_gameSummary=true;
       this.pauseTimer();
     } 
-
-    this.feladat = this.tasks[this.made_tasks-1].question;
+    this.feladat = this.tasks[this.made_tasks-1].question + ' = ';
     this.correct_answer = this.tasks[this.made_tasks-1].correct_answer;
   }
 

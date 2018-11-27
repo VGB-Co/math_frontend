@@ -17,6 +17,6 @@ export class RestClient {
     }
 
     getTasksFor(difficulty) {
-        return this.http.get('http://172.20.10.3:8000/api/tasks');
+        return this.http.get('http://localhost:8000/api/tasks');
     }
 }
