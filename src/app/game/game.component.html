@@ -45,7 +45,7 @@
         </div>
 
         <div *ngIf="visible_gameSummary">
-          <div style="margin-bottom: 10px">
+          <div style="margin-bottom: 10px" id="details">
             <blockquote class="blockquote">
                 <p class="mb-0" style="font-weight: bold; font-size: 15px;">Game ended!</p>
                 <p class="mb-0">Answered questions: {{made_tasks}}</p>
@@ -53,8 +53,10 @@
                 <p class="mb-0">Your time was: {{timeLeft/100}} seconds</p>
             </blockquote>
           </div>
-          <button style="right: 10px; width: auto" class="basic_btn" (click)="startNewGame()">Start new game</button>
-          <button style="right: 10px; width: auto" class="basic_btn" (click)="backToHome()">Back to HOME</button>
+          <div>
+            <button style="right: 10px; width: auto" class="basic_btn" (click)="startNewGame()">Start new game</button>
+            <button style="right: 10px; width: auto" class="basic_btn" (click)="backToHome()">Back to HOME</button>
+          </div>
         </div>
 
     </div>

@@ -81,6 +81,7 @@ a.active {
   transition: 0.8s;
   position: relative;
   overflow: hidden;
+  font-weight: bold;
 }
 
 #btn_login_screen1, #btn_login_screen2{
