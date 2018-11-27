@@ -86,10 +86,10 @@ export class GameComponent implements OnInit {
       this.answer_correction=false;
     }
 
-    if (this.made_tasks<10)
+    if (this.made_tasks<this.tasks.length)
     {
       this.made_tasks += 1;
-      this.value_taskprogressbar = 10 * (this.made_tasks-1);
+      this.value_taskprogressbar = (100/this.tasks.length) * (this.made_tasks-1);
       var pbValueString: string = String(this.value_taskprogressbar);
       widthString="--pb-width: " + pbValueString + "%";
       document.querySelector("body").style.cssText = widthString;
@@ -99,6 +99,9 @@ export class GameComponent implements OnInit {
       this.visible_gameSummary=true;
       this.pauseTimer();
     } 
+
+    this.feladat = this.tasks[this.made_tasks-1].question;
+    this.correct_answer = this.tasks[this.made_tasks-1].correct_answer;
   }
 
   clickOnInputField(){
