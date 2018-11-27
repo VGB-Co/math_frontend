@@ -18,6 +18,8 @@ export class GameComponent implements OnInit {
     this.getTasksFor(0);
   }
 
+  private tasks = Array<Task>();
+
   getTasksFor(difficulty) {
     this.restClient.getTasksFor(difficulty).subscribe(
     data => {
@@ -28,9 +30,12 @@ export class GameComponent implements OnInit {
               });
               // this.topListUsers=users;
               console.log(tasks);
+              this.tasks = tasks;
+              this.feladat = this.tasks[0].question;
+              this.correct_answer = this.tasks[0].correct_answer;
             },
     err => console.error(err),
-    () => console.log('other')
+    () => console.log('getTasksFor completed')
   );
   }
 
@@ -55,7 +60,7 @@ export class GameComponent implements OnInit {
   value='';
   szam1=5;
   szam2=10;
-  feladat = this.szam1 + ' + ' + this.szam2 + ' = ';
+  feladat = '';
   made_tasks=1;
   correct_answer=0;
   correct_answers=0;
@@ -69,7 +74,6 @@ export class GameComponent implements OnInit {
   onEnter(value: string) {
     this.answeredCardNeeded=true; 
     this.value = value; 
-    this.correct_answer = this.szam1 + this.szam2;
     var widthString = "";
     if(this.correct_answer == Number(this.value)) 
     {
