@@ -12,12 +12,12 @@
 
         <h1 class="topic_header">About us</h1>
 
-        <h2 id="aboutTitle" style="font-size: 20px; font-weight: bold; margin-bottom: 30px">Developers:</h2>
-        <blockquote class="blockquote" style="padding-bottom: 30px">
-            <p class="mb-0" style="font-size: 20px">Read the 3 developer's introductions below </p>
-            <footer class="blockquote-footer" style="padding-bottom: 5px; font-size: 16px"> company impovemnts apportuinty , share my effort to achieve the company sucess</footer>
-            <footer class="blockquote-footer" style="padding-bottom: 5px; font-size: 16px"> achieve a new job, which can put into practice all my skills and my best performance in favor of the organization that hire me, in a win-win relationship</footer>
-            <footer class="blockquote-footer" style="font-size: 16px"> respect | safe and good environment | clear rules and vision</footer>
+        <h2 class="aboutTitle">Developers:</h2>
+        <blockquote class="blockquote" [ngStyle]="{'padding-bottom': '30px'}">
+            <p class="mb-0" [ngStyle]="{'font-size': '20px'}">Read the 3 developer's introductions below </p>
+            <footer class="blockquote-footer"> company impovemnts apportuinty , share my effort to achieve the company sucess</footer>
+            <footer class="blockquote-footer"> achieve a new job, which can put into practice all my skills and my best performance in favor of the organization that hire me, in a win-win relationship</footer>
+            <footer class="blockquote-footer"> respect | safe and good environment | clear rules and vision</footer>
         </blockquote>
 
         <h4>You can check the developers with clicking the appropriate button below!</h4>
@@ -39,7 +39,7 @@
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                         <div class="card-footer">
-                        <small class="text-muted"><a href="https://github.com/Levivig" style="text-decoration: none"> > Visit Víg Levente's GitHub...</a></small>
+                        <small class="text-muted"><a href="https://github.com/Levivig" [ngStyle]="{'text-decoration': 'none'}"> > Visit Víg Levente's GitHub...</a></small>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                         <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                         </div>
                         <div class="card-footer">
-                        <small class="text-muted"><a href="https://github.com/Fyccek" style="text-decoration: none"> > Visit Gurmai István's GitHub...</a></small>
+                        <small class="text-muted"><a href="https://github.com/Fyccek" [ngStyle]="{'text-decoration': 'none'}"> > Visit Gurmai István's GitHub...</a></small>
                         </div>
                     </div>
                 </div>
@@ -71,17 +71,17 @@
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                             </div>
                             <div class="card-footer">
-                            <small class="text-muted"><a href="https://github.com/james9711" style="text-decoration: none"> > Visit Berki Ádám's GitHub...</a></small>
+                            <small class="text-muted"><a href="https://github.com/james9711" [ngStyle]="{'text-decoration': 'none'}"> > Visit Berki Ádám's GitHub...</a></small>
                             </div>
                         </div>
                 </div>
             </div>
         </div>
         
-        <h2 id="aboutTitle" style="font-size: 20px; font-weight: bold; margin-top: 40px; margin-bottom: 30px">Sponsorship:</h2>
-        <blockquote class="blockquote" style="padding-bottom: 30px">
-            <p class="mb-0" style="font-size: 20px">We hope you'll enjoy it this YouTube chanel as you enjoy our mathematical tasks.</p>
-            <footer class="blockquote-footer" style="padding-bottom: 5px; font-size: 16px">Here you can find some concert | festival | gaming videos!</footer>
+        <h2 class="aboutTitle" [ngStyle]="{'margin-top': '40px'}">Sponsorship:</h2>
+        <blockquote class="blockquote" [ngStyle]="{'padding-bottom': '30px'}">
+            <p class="mb-0" [ngStyle]="{'font-size':'20px'}">We hope you'll enjoy it this YouTube chanel as you enjoy our mathematical tasks.</p>
+            <footer class="blockquote-footer">Here you can find some concert | festival | gaming videos!</footer>
         </blockquote>
         <iframe width="430" height="230" src="https://www.youtube.com/embed/videoseries?list=PLonjrkjJyBBmznI7IRlHV7r9mLFFD1uK6" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>        
 
