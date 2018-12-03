@@ -15,7 +15,6 @@ export class GameComponent implements OnInit {
 
   ngOnInit() {
     this.startNewGame();
-    this.getTasksFor(0);
   }
 
   private tasks = Array<Task>();
@@ -74,29 +73,32 @@ export class GameComponent implements OnInit {
   answeredCardNeeded=false;
 
   selectEasyDiff(){
-    this.difficulity = "easy";
+    this.difficulity = "0";
     console.log(this.difficulity);
+    this.getTasksFor(this.difficulity);
     this.visible_diffChooser=false;
     this.visible_game=true;
   }
 
   selectMediumDiff(){
-    this.difficulity = "medium";
+    this.difficulity = "1";
     console.log(this.difficulity);
+    this.getTasksFor(this.difficulity);
     this.visible_diffChooser=false;
     this.visible_game=true;
   }
 
   selectHardDiff(){
-    this.difficulity = "hard";
+    this.difficulity = "2";
     console.log(this.difficulity);
+    this.getTasksFor(this.difficulity);
     this.visible_diffChooser=false;
     this.visible_game=true;
   }
 
   onEnter(value: string) {
     this.answeredCardNeeded=true; 
-    this.value = value; 
+    this.value = value;
     var widthString = "";
     if(this.correct_answer == Number(this.value)) 
     {

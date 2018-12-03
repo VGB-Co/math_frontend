@@ -36,7 +36,7 @@
             </div>
             <div style="text-align: center; padding-bottom: 20px">
               <a id="task">{{feladat}} </a>
-              <input id="answerInput" placeholder="Answer here" #box (keyup.enter)="onEnter(box.value)" (click)="clickOnInputField()">
+              <input id="answerInput" placeholder="Answer here" #box (keyup.enter)="onEnter(box.value); box.value=''" (click)="clickOnInputField()">
               <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
             </div>
             <div class="card" id="answerCard" *ngIf="answeredCardNeeded">
