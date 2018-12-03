@@ -16,6 +16,16 @@
     }
 }
 
+
+@keyframes buttonAnimation{
+    from{
+        left: 200px;
+    }
+    to{
+        left: 0px;
+    }
+}
+
 #task{
     font-family: "Pacifico", cursive;
     font-size: 40px;
@@ -52,6 +62,18 @@
     font-size: 25px;
     font-weight: normal;
     border: 1px solid black;
+}
+
+#easy{
+    animation: buttonAnimation 1s;
+}
+
+#medium{
+    animation: buttonAnimation 1.5s;
+}
+
+#hard{
+    animation: buttonAnimation 2s;
 }
 
 #easy::before {
