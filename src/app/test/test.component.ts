@@ -9,8 +9,6 @@ export class TestComponent implements OnInit {
 
   public siteUrl = window.location.href;
   public myId = "testId";
-  public greeting = '';
-  public choosenLvl = '';
 
   constructor() { }
 
@@ -27,27 +25,6 @@ export class TestComponent implements OnInit {
         console.log(this.user + ' succesfully logged in!');
       } 
     }
-  }
-
-  selectEasyDiff(){
-    console.log(event);
-    this.greeting = ' lvl easy choosen!';
-    this.choosenLvl = "easy";
-    console.log(this.choosenLvl);
-  }
-
-  selectMediumDiff(){
-    console.log(event);
-    this.greeting = ' lvl medium choosen!';
-    this.choosenLvl = "medium";
-    console.log(this.choosenLvl);
-  }
-
-  selectHardDiff(){
-    console.log(event);
-    this.greeting = ' lvl hard choosen!';
-    this.choosenLvl = "hard";
-    console.log(this.choosenLvl);
   }
 
 }

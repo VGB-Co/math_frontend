@@ -17,6 +17,7 @@ export class RestClient {
     }
 
     getTasksFor(difficulty) {
-        return this.http.get('http://18.220.101.207:8000/api/tasks');
+        console.log('Get tasks from database');
+        return this.http.get('http://levivig.design:8000/api/tasks');
     }
 }

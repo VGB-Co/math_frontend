@@ -57,6 +57,7 @@ export class GameComponent implements OnInit {
     this.timeLeft = 0;
   }
 
+  difficulity='';
   value='';
   szam1=5;
   szam2=10;
@@ -67,9 +68,31 @@ export class GameComponent implements OnInit {
   public answer_correction=true;
   answer_string='';
   value_taskprogressbar=0;
-  visible_game=true;
+  visible_diffChooser=true;
+  visible_game=false;
   visible_gameSummary=false;
   answeredCardNeeded=false;
+
+  selectEasyDiff(){
+    this.difficulity = "easy";
+    console.log(this.difficulity);
+    this.visible_diffChooser=false;
+    this.visible_game=true;
+  }
+
+  selectMediumDiff(){
+    this.difficulity = "medium";
+    console.log(this.difficulity);
+    this.visible_diffChooser=false;
+    this.visible_game=true;
+  }
+
+  selectHardDiff(){
+    this.difficulity = "hard";
+    console.log(this.difficulity);
+    this.visible_diffChooser=false;
+    this.visible_game=true;
+  }
 
   onEnter(value: string) {
     this.answeredCardNeeded=true; 
@@ -120,7 +143,8 @@ export class GameComponent implements OnInit {
     var pbValueString: string = String(this.value_taskprogressbar);
     widthString="--pb-width: " + pbValueString + "%";
     document.querySelector("body").style.cssText = widthString;
-    this.visible_game=true;
+    this.visible_diffChooser=true;
+    this.visible_game=false;
     this.visible_gameSummary=false;
     this.answeredCardNeeded=false;
   }

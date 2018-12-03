@@ -31,6 +31,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0-rc.0",
     "@angular/router": "~7.0.0-rc.0",
     "agstopwatch": "^1.1.0",
+    "angular-countdown": "^1.2.1",
     "angularfire2": "^5.1.0",
     "core-js": "^2.5.4",
     "express": "^4.16.4",
