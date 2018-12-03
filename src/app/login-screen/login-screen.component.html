@@ -2,8 +2,8 @@
   <div class="split left">
     <div class="centered" id="container_mainScreen">
       <span class="text1">WELCOME TO </span>
-      <span class="text2" style="color: rgb(201, 139, 25)"> VGB Co. </span>
-      <div style="margin-top: 40px;">
+      <span class="text2" [ngStyle]="{'color':'rgb(201, 139, 25)'}"> VGB Co. </span>
+      <div [ngStyle]="{'margin-top':'40px'}">
         <button class="basic_btn" id="btn_login_screen1" (click)="login()">Log in</button>
         <button class="basic_btn" id="btn_login_screen2" (click)="register()">Registration</button>
       </div>

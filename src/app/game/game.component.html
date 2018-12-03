@@ -19,6 +19,7 @@
         </div>
 
         <div *ngIf="visible_game">
+
           <div class="container">
             <h4>The progress of your made tasks:</h4> 
             <div class="progress">
@@ -26,42 +27,45 @@
                 {{value_taskprogressbar}}%</div>
             </div>
           </div>
+
           <div class="container">
-            <h4>Time: <span style="font-style: italic; font-size: 20px">{{timeLeft/100}}</span> s</h4> 
+            <h4>Time: <span id="stopwatch">{{timeLeft/100}}</span> s</h4> 
           </div>
-          <div style="padding-top: 20px; padding-left: 90px; padding-bottom: 20px">
-            <h3 style="padding-bottom: 10px;">Your actual task is: </h3>
-            <div style="font-size: 15px">
-              <a style="font-size: 20px;"> {{made_tasks}}. feladat:  </a>
+
+          <div id="taskPart">
+            <h3 [ngStyle]="{'padding-bottom': '15px'}">Your actual task is: </h3>
+            <div [ngStyle]="{'font-size':'20px'}">
+              <a> {{made_tasks}}. feladat:  </a>
             </div>
-            <div style="text-align: center; padding-bottom: 20px">
+            <div id="taskArea">
               <a id="task">{{feladat}} </a>
               <input id="answerInput" placeholder="Answer here" #box (keyup.enter)="onEnter(box.value); box.value=''" (click)="clickOnInputField()">
-              <a> (press <kbd>ENTER</kbd> for submit your answer)</a>
+              <a [ngStyle]="{'font-size':'20px'}"> (press <kbd>ENTER</kbd> for submit your answer)</a>
             </div>
             <div class="card" id="answerCard" *ngIf="answeredCardNeeded">
               <div class="card-header">
                   Here you can see if your previous answer was correct or not:
               </div>
-              <div class="card-body" [style.color]="answer_correction ? 'rgba(77, 153, 33, 0.801)' : 'rgba(146, 39, 20, 0.801)'" style="height: 60px;">
+              <div class="card-body" [style.color]="answer_correction ? 'rgba(77, 153, 33, 0.801)' : 'rgba(146, 39, 20, 0.801)'" [ngStyle]="{'height':'60px'}">
                   {{answer_string}}
               </div>
             </div> 
           </div>
+
         </div>
 
         <div *ngIf="visible_gameSummary">
-          <div style="margin-bottom: 10px" id="details">
+          <div id="details">
             <blockquote class="blockquote">
-                <p class="mb-0" style="font-weight: bold; font-size: 15px;">Game ended!</p>
+                <h3 class="mb-0" [ngStyle]="{'padding-bottom':'20px'}">Game ended!</h3>
                 <p class="mb-0">Answered questions: {{made_tasks}}</p>
                 <p class="mb-0">Well answered questions: {{correct_answers}}</p>
                 <p class="mb-0">Your time was: {{timeLeft/100}} seconds</p>
             </blockquote>
           </div>
           <div>
-            <button style="right: 10px; width: auto" class="basic_btn" (click)="startNewGame()">Start new game</button>
-            <button style="right: 10px; width: auto" class="basic_btn" (click)="backToHome()">Back to HOME</button>
+            <button class="basic_btn" (click)="startNewGame()">Start new game</button>
+            <button class="basic_btn" (click)="backToHome()">Back to HOME</button>
           </div>
         </div>
 

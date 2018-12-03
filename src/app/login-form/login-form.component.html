@@ -6,8 +6,8 @@
   <div class="input">
     <input class="inputField" type="password" placeholder="Enter password" required>
   </div>
-  <div style="margin-top: 20px">
-    <button class="diffchoser" style="width: 24%" id="login_btn">Login</button>
-    <button class="diffchoser" style="width: 24%" (click)="login()">Login with Google</button>
+  <div [ngStyle]="{'margin-top':'20px'}">
+    <button class="diffchoser" id="login_btn" [ngStyle]="{'width':'24%'}">Login</button>
+    <button class="diffchoser" [ngStyle]="{'width':'24%'}" (click)="login()">Login with Google</button>
   </div>
 </form>
