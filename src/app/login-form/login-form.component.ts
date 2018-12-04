@@ -56,12 +56,11 @@ export class LoginFormComponent implements OnInit {
         user.name = data['name'];
         user.email = data['email'];
         user.token = data['token'];
-
         
         localStorage.setItem('LoggedUser', user.name); 
         console.log('login success as ' + user.name);
         this.router.navigate(['test']);
-    }
+      },
       err => {
         // TODO: Show unsuccesful login
         console.log(err);

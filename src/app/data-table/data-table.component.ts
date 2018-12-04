@@ -32,8 +32,12 @@ export class DataTableComponent implements OnInit {
     data => {
               var users = new Array<User>();
               data["users"].forEach(user => {
-                let curr_user = new User(user);
-                users.push(curr_user);
+                let curr_user = new User();
+                curr_user.name=user.name;
+                curr_user.email=user.email;
+                curr_user.position=user.position;
+                curr_user.token=user.token;
+                curr_user.topScore=user.topScore;
               });
               this.topListUsers=users;
             },

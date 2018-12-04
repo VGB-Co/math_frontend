@@ -29,8 +29,7 @@ export class RestClient {
     }
 
     registerUser(name: String, password: String, email: String) {
-        console.log('Login checked');
-        return this.http.post('http://levivig.design:8000/api/register?username=' + name +
-        '&password=' + password + '&email=' + email, null);
+        console.log('Register checked');
+        return this.http.post('http://levivig.design:8000/api/register?username=' + name + '&password=' + password + '&email=' + email, null);
     }
 }
