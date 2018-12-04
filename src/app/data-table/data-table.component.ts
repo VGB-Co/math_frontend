@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
 import { DataTableDataSource } from './data-table-datasource';
-import {RestClient} from '../Mocky/rest.client';
+import {RestClient} from '../api.service';
 import {User} from '../Models/user';
 
 @Component({

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Router } from '@angular/router';
-import { RestClient } from '../Mocky/rest.client';
+import { RestClient } from '../api.service';
 import { User } from '../Models/user';
 
 

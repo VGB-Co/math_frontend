@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { RestClient } from './Mocky/rest.client';
+import { RestClient } from './api.service';
 
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {RestClient} from '../Mocky/rest.client';
+import {RestClient} from '../api.service';
 import { Task } from '../Models/task';
 
 @Component({
