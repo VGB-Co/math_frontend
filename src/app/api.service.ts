@@ -1,13 +1,6 @@
 import {Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
  
-const httpOptions = {
-    headers: new HttpHeaders({ 
-        'Content-Type': 'application/json',
-        'Authorization': 'token'
-    })
-};
- 
 @Injectable()
 export class RestClient {
  
@@ -20,7 +13,14 @@ export class RestClient {
 
     getTasksFor(difficulty) {
         console.log('Get tasks from database');
-        return this.http.get('http://levivig.design:8000/api/tasks?difficulty=' + String(difficulty));
+        console.log(localStorage.getItem('activeToken'));
+        var httpOptions = {
+            headers: new HttpHeaders({ 
+                'Content-Type': 'application/json',
+                'Authorization': 'token ' + localStorage.getItem('activeToken'),
+            })
+        };
+        return this.http.get('http://levivig.design:8000/api/tasks?difficulty=' + String(difficulty), httpOptions);
     }
 
     loginUser(name:string, password:string){
@@ -32,4 +32,5 @@ export class RestClient {
         console.log('Register checked');
         return this.http.post('http://levivig.design:8000/api/register?username=' + name + '&password=' + password + '&email=' + email, null);
     }
+
 }

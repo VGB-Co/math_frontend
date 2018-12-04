@@ -58,6 +58,7 @@ export class LoginFormComponent implements OnInit {
         user.token = data['token'];
         
         localStorage.setItem('LoggedUser', user.name); 
+        localStorage.setItem('activeToken', user.token); 
         console.log('login success as ' + user.name);
         this.router.navigate(['test']);
       },

@@ -38,6 +38,7 @@ export class RegistrationFormComponent implements OnInit {
         user.token = data['token'];
 
       localStorage.setItem('LoggedUser',this.user); 
+      localStorage.setItem('activeToken', user.token); 
       console.log('registration success as ' + this.user);
       this.router.navigate(['test']);
     }, 
