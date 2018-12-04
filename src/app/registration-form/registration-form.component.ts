@@ -27,15 +27,8 @@ export class RegistrationFormComponent implements OnInit {
 
     if(password == password2){
       localStorage.setItem('LoggedUser',this.user); 
-      this.router.navigate(['test']); 
-      console.log('email set: ' + email);
-      console.log('username set: ' + username);
-      console.log('password set: ' + password);
       console.log('registration success as ' + this.user);
-      //this.visible_loginOrRegisterUser=false;
-      //this.visible_loginUser = false;
-      //this.visible_registerUser=false;
-      //this.visible_who_is_loggedIn = true;
+      this.router.navigate(['test']); 
     }
     else{
       console.log('invalid registration');

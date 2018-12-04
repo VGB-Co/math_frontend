@@ -18,13 +18,13 @@ export class LoginScreenComponent implements OnInit {
   login(){
     this.visibleLogin = true;
     this.visibleRegister = false;
-    console.log("log in clicked");
+    console.log("log in is choosed");
   }
 
   register(){
     this.visibleRegister = true;
     this.visibleLogin = false;
-    console.log("resgister clicked");
+    console.log("resgister is choosed");
   }
 
 }

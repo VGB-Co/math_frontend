@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Router } from '@angular/router';
+import { RestClient } from '../Mocky/rest.client';
 
 @Component({
   selector: 'app-login-form',
@@ -9,13 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-form.component.css'],
   providers: [AngularFireAuth]
 })
+
 export class LoginFormComponent implements OnInit {
 
   visible_loginUser=true;
   visible_registerUser=false;
   user = '';
 
-  constructor(private router: Router, public afAuth: AngularFireAuth) { }
+  constructor(private router: Router, public afAuth: AngularFireAuth, private restClient: RestClient) { }
 
   ngOnInit() {
   }
@@ -42,17 +44,13 @@ export class LoginFormComponent implements OnInit {
     var username = e.target.elements[0].value;
     var password = e.target.elements[1].value;
     this.user = username;
-    console.log('username was: ' + username);
-    console.log('password was: ' + password);
+    var response = this.restClient.loginUser(username, password);
+    console.log(response);
 
     if(username == 'user' && password == 'user'){
       localStorage.setItem('LoggedUser',this.user); 
-      this.router.navigate(['test']);
       console.log('login success as ' + this.user);
-      //this.visible_loginOrRegisterUser=false;
-      //this.visible_loginUser = false;
-      //this.visible_registerUser=false;
-      //this.visible_who_is_loggedIn = true;
+      this.router.navigate(['test']);
     }
     else{
       console.log('invalid log in');

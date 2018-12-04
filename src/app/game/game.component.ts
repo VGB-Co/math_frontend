@@ -58,8 +58,6 @@ export class GameComponent implements OnInit {
 
   difficulity='';
   value='';
-  szam1=5;
-  szam2=10;
   feladat = '';
   made_tasks=1;
   correct_answer=0;
@@ -67,6 +65,7 @@ export class GameComponent implements OnInit {
   public answer_correction=true;
   answer_string='';
   value_taskprogressbar=0;
+
   visible_diffChooser=true;
   visible_game=false;
   visible_gameSummary=false;
@@ -74,7 +73,7 @@ export class GameComponent implements OnInit {
 
   selectEasyDiff(){
     this.difficulity = "0";
-    console.log(this.difficulity);
+    console.log('Choosen difficulity: ' + this.difficulity);
     this.getTasksFor(this.difficulity);
     this.visible_diffChooser=false;
     this.visible_game=true;
@@ -82,7 +81,7 @@ export class GameComponent implements OnInit {
 
   selectMediumDiff(){
     this.difficulity = "1";
-    console.log(this.difficulity);
+    console.log('Choosen difficulity: ' + this.difficulity);
     this.getTasksFor(this.difficulity);
     this.visible_diffChooser=false;
     this.visible_game=true;
@@ -90,7 +89,7 @@ export class GameComponent implements OnInit {
 
   selectHardDiff(){
     this.difficulity = "2";
-    console.log(this.difficulity);
+    console.log('Choosen difficulity: ' + this.difficulity);
     this.getTasksFor(this.difficulity);
     this.visible_diffChooser=false;
     this.visible_game=true;
@@ -125,6 +124,7 @@ export class GameComponent implements OnInit {
       this.pauseTimer();
     }
 
+    console.log('Answer checked')
     this.feladat = this.tasks[this.made_tasks-1].question + ' = ';
     this.correct_answer = this.tasks[this.made_tasks-1].correct_answer;
   }
@@ -134,13 +134,13 @@ export class GameComponent implements OnInit {
   }
 
   startNewGame(){
+    console.log('New game started')
     this.resetTimer();
     var widthString = "";
     this.value='';
     this.made_tasks=1;
     this.correct_answers=0;
     this.answer_string='';
-    this.answer_correction=true;
     this.value_taskprogressbar=0;
     var pbValueString: string = String(this.value_taskprogressbar);
     widthString="--pb-width: " + pbValueString + "%";
