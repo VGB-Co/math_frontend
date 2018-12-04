@@ -30,7 +30,7 @@ export class GameComponent implements OnInit {
               });
               console.log(tasks);
               this.tasks = tasks;
-              this.feladat = this.tasks[0].question + ' = ';
+              this.feladat = this.tasks[0].question;
               this.correct_answer = this.tasks[0].correct_answer;
             },
     err => console.error(err),
@@ -130,7 +130,7 @@ export class GameComponent implements OnInit {
       );
     }
 
-    this.feladat = this.tasks[this.made_tasks-1].question + ' = ';
+    this.feladat = this.tasks[this.made_tasks-1].question;
     this.correct_answer = this.tasks[this.made_tasks-1].correct_answer;
   }
 

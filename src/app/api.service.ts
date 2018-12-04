@@ -37,16 +37,15 @@ export class RestClient {
         return !!localStorage.getItem('activeToken');
     }
 
-    postResult(difficulty, time, correct_answer) {
+    postResult(difficulty, correct_answer, time) {
         var httpOptions = {
             headers: new HttpHeaders({ 
-                'Content-Type': 'application/x-www-for-urlencoded',
-                'Authorization': 'token ' + localStorage.getItem('activeToken'),
+                'Content-Type': 'application/json',
+                'Authorization': 'token ' + localStorage.getItem('activeToken')
             })
         };
-        var params = {'time':time, 'correct_answer':correct_answer};
-        console.log(params);
-        return this.http.post('http://levivig.design:8000/api/results?difficulty=' + String(difficulty), params.toString() , httpOptions)
+        var params = {'correct_answer':correct_answer, 'time':time};
+        return this.http.post('http://levivig.design:8000/api/results?difficulty=' + String(difficulty), params , httpOptions);
     }
 
 }
