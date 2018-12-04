@@ -18,6 +18,6 @@ export class RestClient {
 
     getTasksFor(difficulty) {
         console.log('Get tasks from database');
-        return this.http.get('http://levivig.design:8000/api/tasks');
+        return this.http.get('http://levivig.design:8000/api/tasks?difficulty=' + String(difficulty));
     }
 }
