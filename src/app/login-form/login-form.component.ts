@@ -3,6 +3,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Router } from '@angular/router';
 import { RestClient } from '../Mocky/rest.client';
+import { User } from '../Models/user';
+
 
 @Component({
   selector: 'app-login-form',
@@ -44,17 +46,28 @@ export class LoginFormComponent implements OnInit {
     var username = e.target.elements[0].value;
     var password = e.target.elements[1].value;
     this.user = username;
-    var response = this.restClient.loginUser(username, password);
-    console.log(response);
+    this.restClient.loginUser(username, password).subscribe(
+      data => {
+        console.log(data['token']);
+        console.log(data['name']);
+        console.log(data['email']);
 
-    if(username == 'user' && password == 'user'){
-      localStorage.setItem('LoggedUser',this.user); 
-      console.log('login success as ' + this.user);
-      this.router.navigate(['test']);
+        var user = new User();
+        user.name = data['name'];
+        user.email = data['email'];
+        user.token = data['token'];
+
+        
+        localStorage.setItem('LoggedUser', user.name); 
+        console.log('login success as ' + user.name);
+        this.router.navigate(['test']);
     }
-    else{
-      console.log('invalid log in');
-    }
+      err => {
+        // TODO: Show unsuccesful login
+        console.log(err);
+        console.log('invalid log in');
+      }
+    );
   }
 
   clickOnSignOut(){
