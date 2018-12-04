@@ -25,7 +25,8 @@ export class LeftMenuComponent implements OnInit {
 
   logOut(){
     console.log(localStorage.getItem('LoggedUser') + ' successfully logged out');
-    //localStorage.removeItem('activeToken');
+    localStorage.removeItem('activeToken');
+    localStorage.removeItem('LoggedUser');
   }
 
 }

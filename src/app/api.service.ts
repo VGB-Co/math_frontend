@@ -33,4 +33,8 @@ export class RestClient {
         return this.http.post('http://levivig.design:8000/api/register?username=' + name + '&password=' + password + '&email=' + email, null);
     }
 
+    loggedIn(){
+        return !!localStorage.getItem('activeToken');
+    }
+
 }

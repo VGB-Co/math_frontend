@@ -6,6 +6,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { RestClient } from './api.service';
+import { LoginGuard } from './login.guard';
 
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
@@ -39,7 +40,7 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     MatSortModule,
     MatTabsModule
   ],
-  providers: [RestClient],
+  providers: [RestClient, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
