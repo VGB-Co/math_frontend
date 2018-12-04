@@ -10,6 +10,11 @@ export class AppComponent {
 
   constructor() { }
 
+  ngOnInit(): void {
+    localStorage.removeItem('activeToken');
+    localStorage.removeItem('LoggedUser');
+  }
+
 }
 
 

@@ -110,6 +110,8 @@ export class GameComponent implements OnInit {
       this.answer_correction=false;
     }
 
+    console.log('Answer checked');
+
     if (this.made_tasks<this.tasks.length)
     {
       this.made_tasks += 1;
@@ -122,9 +124,12 @@ export class GameComponent implements OnInit {
       this.visible_game=false;
       this.visible_gameSummary=true;
       this.pauseTimer();
+      this.restClient.postResult(this.difficulity, (this.timeLeft/100), this.correct_answers).subscribe (
+        data => console.log(data),
+        err => console.log(err)
+      );
     }
 
-    console.log('Answer checked')
     this.feladat = this.tasks[this.made_tasks-1].question + ' = ';
     this.correct_answer = this.tasks[this.made_tasks-1].correct_answer;
   }
