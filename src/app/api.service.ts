@@ -5,6 +5,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class RestClient {
  
     constructor(private http:HttpClient) {}
+
+    private baseURL = 'http://0.0.0.0:8000/api';
  
     // Uses http.get() to load data from a single API endpoint
     getTopListFor(level) {
@@ -20,32 +22,33 @@ export class RestClient {
                 'Authorization': 'token ' + localStorage.getItem('activeToken'),
             })
         };
-        return this.http.get('http://levivig.design:8000/api/tasks?difficulty=' + String(difficulty), httpOptions);
+        return this.http.get(this.baseURL + '/tasks?difficulty=' + String(difficulty), httpOptions);
     }
 
     loginUser(name:string, password:string){
         console.log('Login checked');
-        return this.http.post('http://levivig.design:8000/api/login?username=' + String(name) + '&password=' + String(password), null);
+        return this.http.post(this.baseURL + '/login?username=' + String(name) + '&password=' + String(password), null);
     }
 
     registerUser(name: String, password: String, email: String) {
         console.log('Register checked');
-        return this.http.post('http://levivig.design:8000/api/register?username=' + name + '&password=' + password + '&email=' + email, null);
+        return this.http.post(this.baseURL + '/register?username=' + name + '&password=' + password + '&email=' + email, null);
     }
 
     loggedIn(){
         return !!localStorage.getItem('activeToken');
     }
 
-    postResult(difficulty, correct_answer, time) {
+    postResult(difficulty, correct_answer: Number, time: Number) {
         var httpOptions = {
-            headers: new HttpHeaders({ 
-                'Content-Type': 'application/json',
-                'Authorization': 'token ' + localStorage.getItem('activeToken')
+            headers: new HttpHeaders({
+                'Authorization': 'token ' + localStorage.getItem('activeToken'),
+                'Content-Type': 'application/json'
             })
         };
-        var params = {'correct_answer':correct_answer, 'time':time};
-        return this.http.post('http://levivig.design:8000/api/results?difficulty=' + String(difficulty), params , httpOptions);
+        console.log('❤️ Results: correct = ' + correct_answer + ' time = ' + time);
+        const data = {'correct_answer': 5,'time': 1.23};
+        return this.http.post(this.baseURL + '/results?difficulty=' + String(difficulty), data, httpOptions);
     }
 
 }

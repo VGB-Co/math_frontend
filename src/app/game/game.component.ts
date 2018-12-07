@@ -124,7 +124,7 @@ export class GameComponent implements OnInit {
       this.visible_game=false;
       this.visible_gameSummary=true;
       this.pauseTimer();
-      this.restClient.postResult(this.difficulity, (this.timeLeft/100), this.correct_answers).subscribe (
+      this.restClient.postResult(this.difficulity, this.correct_answers, this.timeLeft/100).subscribe(
         data => console.log(data),
         err => console.log(err)
       );
