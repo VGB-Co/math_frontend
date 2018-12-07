@@ -6,7 +6,7 @@ export class RestClient {
  
     constructor(private http:HttpClient) {}
 
-    private baseURL = 'http://0.0.0.0:8000/api';
+    private baseURL = 'http://levivig.design:8000/api';
  
     // Uses http.get() to load data from a single API endpoint
     getTopListFor(level) {
