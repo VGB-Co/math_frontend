@@ -3,7 +3,8 @@ export class User {
     name: string;
     email: string;
     token: string;
-    topScore: string;
+    score: string;
+    time: string;
 
     constructor() {}
 }

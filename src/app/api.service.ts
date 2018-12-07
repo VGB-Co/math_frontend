@@ -4,13 +4,21 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class RestClient {
  
-    constructor(private http:HttpClient) {}
+    constructor(private http: HttpClient) {}
 
     private baseURL = 'http://levivig.design:8000/api';
  
     // Uses http.get() to load data from a single API endpoint
     getTopListFor(level) {
-        return this.http.get('https://www.mocky.io/v2/5bc244243100004e001fca81');
+        console.log('Get toplis from database');
+        console.log(localStorage.getItem('activeToken'));
+        var httpOptions = {
+            headers: new HttpHeaders({ 
+                'Content-Type': 'application/json',
+                'Authorization': 'token ' + localStorage.getItem('activeToken'),
+            })
+        };
+        return this.http.get(this.baseURL + '/toplist?difficulty=' + String(level), httpOptions);
     }
 
     getTasksFor(difficulty) {
