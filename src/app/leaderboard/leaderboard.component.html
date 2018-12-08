@@ -14,18 +14,18 @@
 
         <h3 class="leaderboardHeader">Choose diff. level you would like to list:</h3> 
 
-        <mat-tab-group class="lvl_chooser_tab">
+        <mat-tab-group class="lvl_chooser_tab" (selectedTabChange)="tabChanged($event)">
           <mat-tab label="lvl EASY">
             <ng-template matTabContent>
                 <app-data-table></app-data-table>
             </ng-template>
           </mat-tab>
-          <mat-tab label="lvl MEDIUM">
+          <mat-tab label="lvl MEDIUM" (click)="listMedium()">
             <ng-template matTabContent>
                 <app-data-table></app-data-table>
             </ng-template>
           </mat-tab>
-          <mat-tab label="lvl HARD">
+          <mat-tab label="lvl HARD" (click)="listHard()">
             <ng-template matTabContent>
                 <app-data-table></app-data-table>
             </ng-template>

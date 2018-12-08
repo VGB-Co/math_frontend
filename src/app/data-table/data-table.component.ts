@@ -33,8 +33,8 @@ export class DataTableComponent implements OnInit {
               var users = new Array<User>();
               data["users"].forEach(user => {
                 console.log(user['name']);
-                console.log(user['score']);
-                console.log(user['time']);
+                //console.log(user['score']);
+                //console.log(user['time']);
                 let curr_user = new User();
                 curr_user.name=user['name'];
                 curr_user.score=user['score'];
