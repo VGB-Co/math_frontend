@@ -34,12 +34,24 @@ export class RestClient {
 
     loginUser(name:string, password:string){
         console.log('Login checked');
-        return this.http.post(this.baseURL + '/login?username=' + String(name) + '&password=' + String(password), null);
+        const data = {'username': name, 'password': password};
+        var httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+            })
+        };
+        return this.http.post(this.baseURL + '/login', data, httpOptions);
     }
 
     registerUser(name: String, password: String, email: String) {
         console.log('Register checked');
-        return this.http.post(this.baseURL + '/register?username=' + name + '&password=' + password + '&email=' + email, null);
+        const data = {'username': name, 'password': password, 'email': email};
+        var httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json',
+            })
+        };
+        return this.http.post(this.baseURL + '/register', data, httpOptions);
     }
 
     loggedIn(){
