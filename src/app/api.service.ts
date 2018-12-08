@@ -8,9 +8,8 @@ export class RestClient {
 
     private baseURL = 'http://levivig.design:8000/api';
  
-    // Uses http.get() to load data from a single API endpoint
     getTopListFor(level) {
-        console.log('Get toplis from database');
+        console.log('Get toplist from database');
         console.log(localStorage.getItem('activeToken'));
         var httpOptions = {
             headers: new HttpHeaders({ 
@@ -54,8 +53,8 @@ export class RestClient {
                 'Content-Type': 'application/json'
             })
         };
-        console.log('❤️ Results: correct = ' + correct_answer + ' time = ' + time);
-        const data = {'correct_answer': 5,'time': 1.23};
+        const data = {'correct_answer': correct_answer,'time': time};
+        console.log('results( :correct answers = ' + correct_answer + ' time = ' + time + 'sec) was post to database');
         return this.http.post(this.baseURL + '/results?difficulty=' + String(difficulty), data, httpOptions);
     }
 
