@@ -6,7 +6,7 @@ export class RestClient {
  
     constructor(private http: HttpClient) {}
 
-    private baseURL = 'http://levivig.design:8000/api';
+    private baseURL = 'https://levivig.design:8000/api';
  
     getTopListFor(level) {
         console.log('Get toplist from database');
