@@ -1,16 +1,21 @@
 <h3>Please fill in this form for <span class="mainScreen_keyword">registration</span>.</h3>
+<div *ngIf="inValidRegister" class="animate-if">
+  <h4> Invalid registration...</h4>
+  <h4> The given passwords are not the same</h4>
+  <h4> Please try again!</h4>
+</div>
 <form class="containerRegister" (submit)="registerUser($event); boxEmailR.value=''; boxUsernameR.value=''; boxPassword1R.value=''; boxPassword2R.value=''">
   <div class="input">
-    <input #boxEmailR class="inputField" type="email" placeholder="Enter email" required>
+    <input [style.border]="inValidRegister ? '3px solid #C62828' : ''" #boxEmailR class="inputField" type="email" placeholder="Enter email" required>
   </div>
   <div class="input">
-    <input #boxUsernameR class="inputField" type="text" placeholder="Enter username" required>
+    <input [style.border]="inValidRegister ? '3px solid #C62828' : ''" #boxUsernameR class="inputField" type="text" placeholder="Enter username" required>
   </div>
   <div class="input">
-    <input #boxPassword1R class="inputField" type="password" placeholder="Enter password" required>
+    <input [style.border]="inValidRegister ? '3px solid #C62828' : ''" #boxPassword1R class="inputField" type="password" placeholder="Enter password" required>
   </div>
   <div class="input">
-    <input #boxPassword2R class="inputField" type="password" placeholder="Enter password again" required>
+    <input [style.border]="inValidRegister ? '3px solid #C62828' : ''" #boxPassword2R class="inputField" type="password" placeholder="Enter password again" required>
   </div>
   <div [ngStyle]="{'margin-top':'20px'}">
     <button class="inputField" class="diffchoser" [ngStyle]="{'width':'48%'}" id="register_btn">Register</button>

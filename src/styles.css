@@ -153,3 +153,15 @@ img:hover{
 	text-transform: uppercase;
 	font-weight: bold;
 }
+
+.animate-if {
+	width: auto;
+	background:rgba(143, 35, 35, 0.521);
+	border:1px solid rgb(104, 30, 30);
+	padding:10px;
+}
+
+.animate-if h4{
+	text-align: center;
+	font-weight: bold;
+}

@@ -16,6 +16,7 @@ export class LoginFormComponent implements OnInit {
 
   visible_loginUser=true;
   visible_registerUser=false;
+  inValidLogIn=false;
   user = '';
 
   constructor(private router: Router, public afAuth: AngularFireAuth, private restClient: RestClient) { }
@@ -60,6 +61,7 @@ export class LoginFormComponent implements OnInit {
       },
       //hiba TODO
       err => {
+        this.inValidLogIn=true;
         console.log(err);
         console.log('invalid log in');
       }

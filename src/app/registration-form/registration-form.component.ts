@@ -12,6 +12,7 @@ import { User } from '../Models/user';
 })
 export class RegistrationFormComponent implements OnInit {
 
+  inValidRegister=false;
   user = '';
 
   constructor(private router: Router, private restClient: RestClient) { }
@@ -45,6 +46,7 @@ export class RegistrationFormComponent implements OnInit {
       },
         //hiba TODO 
         err => {
+          this.inValidRegister=true;
           console.log(err);
           console.log('invalid registration');
         }
@@ -52,6 +54,7 @@ export class RegistrationFormComponent implements OnInit {
     }
     //hiba TODO
     else{
+      this.inValidRegister=true;
       console.log('invalid registration: the given passwords are not the same')
     }
   }

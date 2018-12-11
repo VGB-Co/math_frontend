@@ -1,10 +1,14 @@
 <h3>Please fill in this form to <span class="mainScreen_keyword">log in</span> to your account.</h3>
+<div *ngIf="inValidLogIn" class="animate-if">
+  <h4> The given username or password was incorrect...</h4>
+  <h4> Please try again!</h4>
+</div>
 <form class="containerLogIn" (submit)="loginUser($event); boxUsername.value=''; boxPassword.value=''">
   <div class="input">
-    <input #boxUsername class="inputField" type="text" placeholder="Enter username" required>
+    <input [style.border]="inValidLogIn ? '3px solid #C62828' : ''" #boxUsername class="inputField" type="text" placeholder="Enter username" required>
   </div>
   <div class="input">
-    <input #boxPassword class="inputField" type="password" placeholder="Enter password" required>
+    <input [style.border]="inValidLogIn ? '3px solid #C62828' : ''" #boxPassword class="inputField" type="password" placeholder="Enter password" required>
   </div>
   <div [ngStyle]="{'margin-top':'20px'}">
     <button class="diffchoser" id="login_btn" [ngStyle]="{'width':'24%'}">Login</button>
