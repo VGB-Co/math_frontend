@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { RestClient } from '../api.service';
 import { User } from '../Models/user';
 
-
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -59,11 +58,13 @@ export class LoginFormComponent implements OnInit {
         console.log('login success as ' + user.name);
         this.router.navigate(['test']);
       },
+      //hiba TODO
       err => {
         console.log(err);
         console.log('invalid log in');
       }
     );
+
   }
 
 }

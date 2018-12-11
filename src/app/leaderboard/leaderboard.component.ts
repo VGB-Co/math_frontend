@@ -16,7 +16,7 @@ export class LeaderboardComponent implements OnInit {
       console.log(tabChangeEvent);
       if(tabChangeEvent.index==0){
         console.log('Easy leaderboard listed');
-        localStorage.setItem('chooseLeaderboardLevel', '0'); 
+        localStorage.setItem('chooseLeaderboardLevel', '0');
       }
       else{
         if(tabChangeEvent.index==1){

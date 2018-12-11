@@ -21,11 +21,11 @@ export class DataTableComponent implements OnInit {
   constructor(private _restClient: RestClient) { }
 
   ngOnInit() {
-    this.getTopListFor(localStorage.getItem('chooseLeaderboardLevel'));
     this.dataSource = new DataTableDataSource(this.paginator, this.sort);
+    this.getTopListFor(localStorage.getItem('chooseLeaderboardLevel'));
   }
 
-  getTopListFor(level) {
+  public getTopListFor(level) {
     this._restClient.getTopListFor(level).subscribe(
     data => {
               var users = new Array<User>();
@@ -38,7 +38,7 @@ export class DataTableComponent implements OnInit {
               });
               this.topListUsers=users;
             },
-    err => console.error(err),
+    err => {console.error(err)},
     () => console.log(this.topListUsers),
   );
   }

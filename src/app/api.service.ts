@@ -1,5 +1,8 @@
 import {Injectable} from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import "rxjs/add/operator/catch";
+import "rxjs/add/observable/throw";
+import { Observable } from 'rxjs/Observable';
  
 @Injectable()
 export class RestClient {
@@ -17,7 +20,11 @@ export class RestClient {
                 'Authorization': 'token ' + localStorage.getItem('activeToken'),
             })
         };
-        return this.http.get(this.baseURL + '/toplist?difficulty=' + String(level), httpOptions);
+        return this.http.get(this.baseURL + '/toplist?difficulty=' + String(level), httpOptions)
+                        .catch((error)=>{
+                            console.log('Error while getting the toplist');
+                            return Observable.throw(error);
+        });
     }
 
     getTasksFor(difficulty) {
@@ -29,7 +36,11 @@ export class RestClient {
                 'Authorization': 'token ' + localStorage.getItem('activeToken'),
             })
         };
-        return this.http.get(this.baseURL + '/tasks?difficulty=' + String(difficulty), httpOptions);
+        return this.http.get(this.baseURL + '/tasks?difficulty=' + String(difficulty), httpOptions)
+                        .catch((error)=>{
+                            console.log('Error while getting the tasks');
+                            return Observable.throw(error);
+        });
     }
 
     loginUser(name:string, password:string){
@@ -40,7 +51,11 @@ export class RestClient {
                 'Content-Type': 'application/json',
             })
         };
-        return this.http.post(this.baseURL + '/login', data, httpOptions);
+        return this.http.post(this.baseURL + '/login', data, httpOptions)
+                        .catch((error)=>{
+                            console.log('Error while user log in');
+                            return Observable.throw(error);
+        });
     }
 
     registerUser(name: String, password: String, email: String) {
@@ -51,7 +66,11 @@ export class RestClient {
                 'Content-Type': 'application/json',
             })
         };
-        return this.http.post(this.baseURL + '/register', data, httpOptions);
+        return this.http.post(this.baseURL + '/register', data, httpOptions)
+                        .catch((error)=>{
+                        console.log('Error while user registration');
+                        return Observable.throw(error);
+        });
     }
 
     loggedIn(){
@@ -67,7 +86,11 @@ export class RestClient {
         };
         const data = {'correct_answer': correct_answer,'time': time};
         console.log('results( :correct answers = ' + correct_answer + ' time = ' + time + 'sec) was post to database');
-        return this.http.post(this.baseURL + '/results?difficulty=' + String(difficulty), data, httpOptions);
+        return this.http.post(this.baseURL + '/results?difficulty=' + String(difficulty), data, httpOptions)
+                        .catch((error)=>{
+                        console.log('Error while result posting');
+                        return Observable.throw(error);
+        });
     }
 
 }

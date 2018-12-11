@@ -42,15 +42,17 @@ export class RegistrationFormComponent implements OnInit {
         localStorage.setItem('activeToken', user.token); 
         console.log('registration success as ' + this.user);
         this.router.navigate(['test']);
-      }, 
+      },
+        //hiba TODO 
         err => {
           console.log(err);
           console.log('invalid registration');
         }
       );
     }
+    //hiba TODO
     else{
-      console.log('invalid registration: the given passwords are not he same')
+      console.log('invalid registration: the given passwords are not the same')
     }
   }
 
