@@ -29,11 +29,8 @@ export class LoginFormComponent implements OnInit {
   }
 
   clickOnLogIn(){
-    this.visible_loginUser=true;
-    this.visible_registerUser=false;
-    //this.user=this.afAuth.user.toPromise.name;
-    //console.log(this.user);
-    //console.log(this.afAuth.user);
+      this.visible_loginUser=true;
+      this.visible_registerUser=false;
   }
 
   clickOnRegister(){
@@ -63,16 +60,10 @@ export class LoginFormComponent implements OnInit {
         this.router.navigate(['test']);
       },
       err => {
-        // TODO: Show unsuccesful login
         console.log(err);
         console.log('invalid log in');
       }
     );
-  }
-
-  clickOnSignOut(){
-    this.user='';
-    this.visible_loginUser = true;
   }
 
 }

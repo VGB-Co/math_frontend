@@ -26,28 +26,32 @@ export class RegistrationFormComponent implements OnInit {
     var password = e.target.elements[2].value;
     var password2 = e.target.elements[3].value;
     this.user = username;
-    this.restClient.registerUser(username, password, email).subscribe(
-      data => {
-        console.log(data['token']);
-        console.log(data['name']);
-        console.log(data['email']);
+    if(password==password2){
+      this.restClient.registerUser(username, password, email).subscribe(
+        data => {
+          console.log(data['token']);
+          console.log(data['name']);
+          console.log(data['email']);
 
-        var user = new User();
-        user.name = data['name'];
-        user.email = data['email'];
-        user.token = data['token'];
+          var user = new User();
+          user.name = data['name'];
+          user.email = data['email'];
+          user.token = data['token'];
 
-      localStorage.setItem('LoggedUser',this.user); 
-      localStorage.setItem('activeToken', user.token); 
-      console.log('registration success as ' + this.user);
-      this.router.navigate(['test']);
-    }, 
-      err => {
-        // TODO: Show unsuccesful login
-        console.log(err);
-        console.log('invalid registration');
-      }
-    );
+        localStorage.setItem('LoggedUser',this.user); 
+        localStorage.setItem('activeToken', user.token); 
+        console.log('registration success as ' + this.user);
+        this.router.navigate(['test']);
+      }, 
+        err => {
+          console.log(err);
+          console.log('invalid registration');
+        }
+      );
+    }
+    else{
+      console.log('invalid registration: the given passwords are not he same')
+    }
   }
 
 }
