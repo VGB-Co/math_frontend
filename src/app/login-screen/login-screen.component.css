@@ -7,9 +7,9 @@
 }
 
 .left {
+    background-color: rgba(17, 17, 17, 0.836);
     width: 60%;
     left: 0;
-    background-color: #111;
     color: whitesmoke;
     font-weight: 100;
     font-family: "Pacifico", cursive;
@@ -18,7 +18,6 @@
 .right {
     width: 40%;
     right: 0;
-    background-color: none;
 }
 
 .centered {
