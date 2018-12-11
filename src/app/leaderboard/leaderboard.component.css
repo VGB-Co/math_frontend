@@ -7,3 +7,17 @@
     font-weight: bold; 
     margin-bottom: 30px;
 }
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 90%;
+  }
+  
+  th, td {
+    padding: 15px;
+  }
