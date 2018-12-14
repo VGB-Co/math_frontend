@@ -33,7 +33,7 @@
           </div>
 
           <div id="taskPart">
-            <h3 [ngStyle]="{'padding-bottom': '15px'}">Your actual task is: </h3>
+            <h3 id="actualTaskHeader">Your actual task is: </h3>
             <div [ngStyle]="{'font-size':'20px'}">
               <a> {{made_tasks}}. feladat:  </a>
             </div>
@@ -54,19 +54,17 @@
 
         </div>
 
-        <div *ngIf="visible_gameSummary">
-          <div id="details">
-            <blockquote class="blockquote">
-                <h3 class="mb-0" [ngStyle]="{'padding-bottom':'20px'}">Game ended!</h3>
-                <p class="mb-0">Answered questions: {{made_tasks}}</p>
-                <p class="mb-0">Well answered questions: {{correct_answers}}</p>
-                <p class="mb-0">Your time was: {{timeLeft/100}} seconds</p>
-            </blockquote>
-          </div>
-          <div>
-            <button class="basic_btn" (click)="startNewGame()">Start new game</button>
-            <button class="basic_btn" (click)="backToHome()">Back to HOME</button>
-          </div>
+        <div *ngIf="visible_gameSummary" id="gameEnded">
+            <div>
+              <h2 [ngStyle]="{'padding-bottom':'30px'}">Game ended!</h2>
+              <h4>Answered questions: <span [ngStyle]="{'font-weight':'bold'}">{{made_tasks}}</span></h4>
+              <h4>Well answered questions: <span [ngStyle]="{'font-weight':'bold'}">{{correct_answers}}</span></h4>
+              <h4>Your time was: <span [ngStyle]="{'font-weight':'bold'}">{{timeLeft/100}} seconds</span></h4>
+            </div>
+            <div [ngStyle]="{'padding-top':'20px'}">
+              <button class="basic_btn" (click)="startNewGame()">Start new game</button>
+              <button class="basic_btn" (click)="backToHome()">Back to HOME</button>
+            </div>
         </div>
 
     </div>
