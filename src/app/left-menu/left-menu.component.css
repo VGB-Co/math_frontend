@@ -1,6 +1,8 @@
 #user{
+    font-family: 'Indie Flower', cursive;
     color: #ad8956;
     text-align: center;
-    font-size: 22px;
+    font-size: 26px;
+    font-weight: bold;
     margin-bottom: 20px;
 }

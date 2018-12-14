@@ -14,8 +14,9 @@
   position: absolute;
   color: whitesmoke;
   width: 50%;
-  font-weight: 200;
-  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 40px;
+  font-family: 'Indie Flower', cursive;
 }
 
 .right-half {

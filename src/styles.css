@@ -13,7 +13,8 @@ body{
 
 .left {
   position: absolute;
-  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  letter-spacing: 1px;
   top: 0rem;
   padding-top: 14rem;
   left: 0px;
@@ -26,8 +27,9 @@ body{
 }
 
 .left a {
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
   padding: 20px 8px 6px 16px;
-  font-size: 20px;
   color: #a8a8a8;
   display: block;
   text-decoration: none;
@@ -35,19 +37,13 @@ body{
 
 .left a:hover {
   text-decoration: none;
-  font-size: 21px;
+  font-size: 27px;
   color: #f1f1f1;
   transform: 0.5s;
 }
 
 a.active {
   color: white;
-}
-
-#aboutTitle{
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
 }
 
 .container2 {
@@ -73,11 +69,12 @@ a.active {
   border: 1px solid black;
   border-radius: 4px;
   background: none;
-  font-size: 15px;
-  font-family: "montserrat";
+  font-size: 20px;
+  font-family: 'Indie Flower', cursive;
+  font-weight: 300;
   cursor: pointer;
   margin: 5px;
-  text-align:center;
+  text-align: center;
   transition: 0.8s;
   position: relative;
   overflow: hidden;
@@ -131,8 +128,9 @@ img:hover{
 }
 
 .topic_header {
+  font-family: 'Indie Flower', cursive;
   padding-bottom: 50px;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   color: #ad8956;
   animation: typing-text 4s steps(80);
@@ -162,6 +160,14 @@ img:hover{
 }
 
 .animate-if h4{
+  font-family: 'Boogaloo', cursive;
 	text-align: center;
-	font-weight: bold;
+  font-size: 20px;
+}
+
+.card-header{
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: 'Indie Flower', cursive;
 }
