@@ -28,13 +28,11 @@
                 <th>#</th>
                 <th>Name</th>
                 <th>Score</th>
-                <th>Time</th>
             </tr>
             <tr *ngFor="let user of topListUsers; index as i">
                 <td [ngStyle]="{'font-weight':'bold'}">{{i+1}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.score}}</td>
-                <td>{{user.time}}</td>
             </tr>
         </table>
 
