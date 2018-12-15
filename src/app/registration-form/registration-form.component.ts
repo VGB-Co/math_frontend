@@ -44,7 +44,6 @@ export class RegistrationFormComponent implements OnInit {
         console.log('registration success as ' + this.user);
         this.router.navigate(['test']);
       },
-        //hiba TODO 
         err => {
           this.inValidRegister=true;
           console.log(err);

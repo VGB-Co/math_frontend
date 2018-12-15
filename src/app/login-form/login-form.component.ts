@@ -24,10 +24,6 @@ export class LoginFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  login() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-  }
-
   clickOnLogIn(){
       this.visible_loginUser=true;
       this.visible_registerUser=false;
@@ -59,7 +55,6 @@ export class LoginFormComponent implements OnInit {
         console.log('login success as ' + user.name);
         this.router.navigate(['test']);
       },
-      //hiba TODO
       err => {
         this.inValidLogIn=true;
         console.log(err);
