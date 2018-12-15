@@ -60,6 +60,7 @@
               <h4>Answered questions: <span [ngStyle]="{'font-weight':'bold'}">{{made_tasks}}</span></h4>
               <h4>Well answered questions: <span [ngStyle]="{'font-weight':'bold'}">{{correct_answers}}</span></h4>
               <h4>Your time was: <span [ngStyle]="{'font-weight':'bold'}">{{timeLeft/100}} seconds</span></h4>
+              <h4 [ngStyle]="{'font-weight':'bold'}">Your score is: {{pontszam}}</h4>
             </div>
             <div [ngStyle]="{'padding-top':'20px'}">
               <button class="basic_btn" (click)="startNewGame()">Start new game</button>

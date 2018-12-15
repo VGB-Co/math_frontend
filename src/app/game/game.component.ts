@@ -65,6 +65,7 @@ export class GameComponent implements OnInit {
   public answer_correction=true;
   answer_string='';
   value_taskprogressbar=0;
+  pontszam = 0;
 
   visible_diffChooser=true;
   visible_game=false;
@@ -125,8 +126,11 @@ export class GameComponent implements OnInit {
       this.visible_gameSummary=true;
       this.pauseTimer();
       this.restClient.postResult(this.difficulity, this.correct_answers, this.timeLeft/100).subscribe(
-        data => console.log(data),
-        err => console.log(err)
+        data => {
+          this.pontszam=data["score"].toFixed(0);
+          console.log('Az elért pontszám: ' + this.pontszam);
+        },
+        err => console.log(err),
       );
     }
 
@@ -147,6 +151,7 @@ export class GameComponent implements OnInit {
     this.correct_answers=0;
     this.answer_string='';
     this.value_taskprogressbar=0;
+    this.pontszam=0;
     var pbValueString: string = String(this.value_taskprogressbar);
     widthString="--pb-width: " + pbValueString + "%";
     document.querySelector("body").style.cssText = widthString;
